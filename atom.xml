@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-22T09:04:51.846Z</updated>
+  <updated>2017-04-22T14:50:35.841Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue项目中目录结构</title>
+    <link href="http://yoursite.com/2017/04/22/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2017/04/22/vue-目录结构/</id>
+    <published>2017-04-22T14:51:16.228Z</published>
+    <updated>2017-04-22T14:50:35.841Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><pre><code>+ index.html  
++ main.js --- 入口文件
++ App.vue --- vue文件,官方推荐命名法 : 首字母大写
+    + .vue文件:  放置的是vue组件代码
+        + html部分 用template标签
+        + css部分  用style标签
+        + js 部分  用script标签
++ package.json ---工程文件(项目依赖/名称/配置)
+    + npm init --yes生成
++ webpack.config.js --- webpack配置文件
+</code></pre><h3 id="二-ES6-模块化开发"><a href="#二-ES6-模块化开发" class="headerlink" title="二.ES6:模块化开发"></a>二.ES6:模块化开发</h3><pre><code>导出模块:
+     export default {}
+引入模块:
+     import 模块名 from 地址
+</code></pre><h3 id="三-所依赖包"><a href="#三-所依赖包" class="headerlink" title="三.所依赖包"></a>三.所依赖包</h3><ol>
+<li>webpack部分<ul>
+<li>npm install webpack@1.13.3 –save-dev</li>
+<li>npm install webpack-dev-server@1.16.2 –save-dev</li>
+</ul>
+</li>
+<li>loader部分(App.vue-&gt; 编译成正常代码 vue-loader@8.5.4)<ul>
+<li>npm install vue-loader@8.5.4 –save-dev</li>
+<li>npm install vue-html-loader –save-dev</li>
+<li>npm install css-loader –save-dev</li>
+<li>npm install vue-style-loader –save-dev</li>
+<li>npm install vue-hot-reload-api@1.3.2 –save-dev</li>
+</ul>
+</li>
+<li>babel部分 (把es6语法编译成es5语法)<ul>
+<li>npm install babel-loader –save-dev</li>
+<li>npm install babel-core –save-dev</li>
+<li>npm install babel-plugin-transform-runtime –save-dev</li>
+<li>npm install babel-preset-es2015 –save-dev</li>
+<li>npm install babel-runtime –save-dev</li>
+</ul>
+</li>
+<li>vue部分<ul>
+<li>npm install vue@1.0.28 –save<h3 id="四-配置文件"><a href="#四-配置文件" class="headerlink" title="四.配置文件"></a>四.配置文件</h3></li>
+</ul>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-简单的目录结构&quot;&gt;&lt;a href=&quot;#一-简单的目录结构&quot; class=&quot;headerlink&quot; title=&quot;一.简单的目录结构&quot;&gt;&lt;/a&gt;一.简单的目录结构&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;+ index.html  
++ main.js --- 入口文件
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

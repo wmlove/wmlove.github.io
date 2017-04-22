@@ -3,13 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo-wm</title>
+  <title>vue项目中目录结构 | Hexo-wm</title>
   <meta name="author" content="Min Wang">
+  
+  <meta name="description" content="一.简单的目录结构+ index.html  
++ main.js --- 入口文件
++ App.vue --- vue文件,官方推荐命名法 : 首字母大写
+    + .vue文件:  放置的是vue组件代码
+        + html部分 用template标签
+        + css部分">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="vue项目中目录结构"/>
   <meta property="og:site_name" content="Hexo-wm"/>
 
   
@@ -93,55 +100,60 @@
 
   <div class="container">
   	<div class="content">
-    	 <div class="row page">
+    	 
 
+
+
+<div class="row post">
+	<!-- cols -->
 	
+	<div id="top_meta"></div>
 	<div class="col-md-9">
 	
 
+		<!-- content -->
+
 		<div class="slogan" style="margin-bottom: 17px">
-      <h4 style="margin-top: 0;color: #333;font-size:15px;font-weight: normal;">当前位置 ： 首页</h4>
-</div>    
+		  <h4 style="margin-top: 0;color: #333;font-size:15px;font-weight: normal;">
+			  当前位置&nbsp;:&nbsp;<a href="/" >首页&nbsp;</a>»&nbsp;文章分类&nbsp;:&nbsp;
+			
+		  &nbsp;</a>»&nbsp; vue项目中目录结构 </h4>
+		</div>
+
 		<div id="top_search"></div>
+				 
 		
-		<!-- title and entry -->
-		
-            <div class="archive">	  
-				<div id="archives"> 
+
+		<div class="archive">	  
+			<div id="archives"> 
 				
-					<header class="entry-header">
-						<div class="entry-info" text-transform : capitalize>				     					      	      
+				<header class="entry-header">
+					<div class="entry-info" text-transform : capitalize>				     					      	      
 							
-							  <span class="entry-date">
-								  <span class="fa fa-calendar" aria-hidden="true"></span>
-								  2017-04-22						      
-							  </span>
+						<span class="entry-date">
+							<span class="fa fa-calendar" aria-hidden="true"></span>
+							2017-04-22						      
+						</span>
 							  
-							  <span class="author vcard">
-								  <span class="fa fa-user" aria-hidden="true"></span>
-								  <a href="/">Min Wang</a> 	
-							  </span>
+							  
+						<span class="author vcard">
+							<span class="fa fa-user" aria-hidden="true"></span>
+							<a href="/">Min Wang</a> 	 	
+						</span>
 
-
-
-							<span class="comments-link">
-								<span class="fa fa-comments" aria-hidden="true"></span>
-								<span class="ds-thread-count" data-thread-key="2017/04/22/vue-目录结构/">暂无评论</span>
-							</span>	
+						<span class="comments-link">
+							<span class="fa fa-comments" aria-hidden="true"></span>
+							<span class="ds-thread-count" data-thread-key="2017/04/22/vue-目录结构/">暂无评论</span>
+						</span>						
 							
-						</div>	
+					</div>	
+
 									
-						<h3 class="entry-title"> 
-							  <a href="/2017/04/22/vue-目录结构/" >vue项目中目录结构</a>
-						</h3>
-
-					</header>
-
-					<div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><pre><code>+ index.html  
+					<h3 class="entry-title"> 
+						<a href="/2017/04/22/vue-目录结构/" >vue项目中目录结构</a>
+					</h3>		
+						
+					<span style="font-size:15px"><h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><pre><code>+ index.html  
 + main.js --- 入口文件
 + App.vue --- vue文件,官方推荐命名法 : 首字母大写
     + .vue文件:  放置的是vue组件代码
@@ -182,189 +194,84 @@
 </ul>
 </li>
 </ol>
+</span>
+				</header>
 
-	
-	...</div>
-</div>
-
-
-					<footer class="entry-meta">					  
-						<a href="/2017/04/22/vue-目录结构/" class="more-link"><span class="fa fa-link" aria-hidden="true"></span>  阅读全文</a>	
-					</footer>
-
-				</div>	
-
-             </div>
-		
-            <div class="archive">	  
-				<div id="archives"> 
+				<!-- share -->
 				
-					<header class="entry-header">
-						<div class="entry-info" text-transform : capitalize>				     					      	      
-							
-							  <span class="entry-date">
-								  <span class="fa fa-calendar" aria-hidden="true"></span>
-								  2017-04-22						      
-							  </span>
-							  
-							  <span class="author vcard">
-								  <span class="fa fa-user" aria-hidden="true"></span>
-								  <a href="/">Min Wang</a> 	
-							  </span>
+					
 
+					
+     <footer class="entry-meta">      
 
+	    <div class="fenlei" style="font-size:13.5px">
+			<span class="entry-categories">
+				<span class="fa fa-folder" aria-hidden="true"></span> 
 
-							<span class="comments-link">
-								<span class="fa fa-comments" aria-hidden="true"></span>
-								<span class="ds-thread-count" data-thread-key="2017/04/22/hello-world/">暂无评论</span>
-							</span>	
-							
-						</div>	
-									
-						<h3 class="entry-title"> 
-							  <a href="/2017/04/22/hello-world/" >Hello World</a>
-						</h3>
-
-					</header>
-
-					<div class="entry">
-  <div class="row">
-	
-	
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-	
-	...</div>
-</div>
-
-
-					<footer class="entry-meta">					  
-						<a href="/2017/04/22/hello-world/" class="more-link"><span class="fa fa-link" aria-hidden="true"></span>  阅读全文</a>	
-					</footer>
-
-				</div>	
-
-             </div>
-		
-            <div class="archive">	  
-				<div id="archives"> 
 				
-					<header class="entry-header">
-						<div class="entry-info" text-transform : capitalize>				     					      	      
-							
-							  <span class="entry-date">
-								  <span class="fa fa-calendar" aria-hidden="true"></span>
-								  2017-04-02						      
-							  </span>
-							  
-							  <span class="author vcard">
-								  <span class="fa fa-user" aria-hidden="true"></span>
-								  <a href="/">Min Wang</a> 	
-							  </span>
 
-
-
-							<span class="comments-link">
-								<span class="fa fa-comments" aria-hidden="true"></span>
-								<span class="ds-thread-count" data-thread-key="2017/04/02/搭建一个vue实例/">暂无评论</span>
-							</span>	
-							
-						</div>	
-									
-						<h3 class="entry-title"> 
-							  <a href="/2017/04/02/搭建一个vue实例/" >第一个vue-jd项目</a>
-						</h3>
-
-					</header>
-
-					<div class="entry">
-  <div class="row">
-	
-	
-		<ul>
-<li><ol>
-<li>在github上创建一个项目例如:vue-jd</li>
-</ol>
-</li>
-<li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git" target="_blank" rel="external">https://github.com/wmlove/vue-jd.git</a></li>
-<li></li>
-<li><ol>
-<li>在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</li>
-</ol>
-</li>
-<li>2.1 把github上的项目拉下来. 如:git clone 地址 </li>
-<li>2.2 cd vue-jd 进入托管项目的跟目录</li>
-<li>2.2 git add 添加</li>
-<li>2.3 git status 查看</li>
-<li>2.4 git commit -m “changes log”  描述</li>
-<li>2.5 git log 日志</li>
-<li>2.5 git push -u origin master 提交</li>
-<li>注意事项:</li>
-<li>具体的git指令，可自行查看帮助（help）</li>
-<li></li>
-<li><ol>
-<li>创建项目 (已经安装了node和npm)</li>
-</ol>
-</li>
-<li>nodejs安装: <a href="http://blog.csdn.net/zzwwjjdj1/article/details/51980082" target="_blank" rel="external">http://blog.csdn.net/zzwwjjdj1/article/details/51980082</a></li>
-<li>npm 介绍: <a href="http://blog.csdn.net/zzwwjjdj1/article/details/51982433" target="_blank" rel="external">http://blog.csdn.net/zzwwjjdj1/article/details/51982433</a></li>
-<li>3.1 安装命令行工具 npm install -g vue-cli</li>
-<li>3.2 vue -version 能看到版本号</li>
-<li>3.3 创建项目框架 vue init webpack vue-jd (创建一个基于”webpack”的项目,后面是项目名)</li>
-<li>安装依赖 </li>
-<li>生成了项目以后是不能直接运行的,现在很多项目都依赖许许多多的模块,需要逐一安装,<br>ctrl+c 停掉刚生成项目的命令,cd vue-jd 进入项目跟目录, 用命令npm install 安装</li>
-<li>dependencies是项目依赖,</li>
-<li>devDependencies是开发时项目依赖.</li>
-<li>运行测试 npm run dev</li>
-<li></li>
-</ul>
-
-	
-	...</div>
-</div>
-
-
-					<footer class="entry-meta">					  
-						<a href="/2017/04/02/搭建一个vue实例/" class="more-link"><span class="fa fa-link" aria-hidden="true"></span>  阅读全文</a>	
-					</footer>
-
-				</div>	
-
-             </div>
-		
-
-		<!-- pagination -->
-		<div>
-			<center>
+			</span>
 			
+			<span class="entry-tags">        
+				<span class="fa fa-tags" aria-hidden="true"></span> 
 
+				
 
-			</center>
+			</span>
 		</div>
+
+     
+		<!-- JiaThis Button BEGIN -->
+		<div class="jiathis_style" style="float:right;">
+			<span class="jiathis_txt">分享到：</span>
+			<a class="jiathis_button_qzone">QQ空间</a>
+			<a class="jiathis_button_tsina">新浪微博</a>
+			<a class="jiathis_button_weixin">微信</a>
+			<a class="jiathis_button_copy">复制</a>
+			<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+			<a class="jiathis_counter_style"></a>
+		</div>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+		<!-- JiaThis Button END -->
+		<br>
+    </footer>
+
+
+				
+			</div>	
+		</div>	 	        
+
+		 
+				
+					<p class="p1">上一篇 <a href="/2017/04/22/hello-world/">Hello World</a></p> 
+
+				
+			
 		
-	</div> <!-- col-md-9 -->
+		<!-- comment -->
+		
+<section id="comment">
+  
+  	 <div class="ds-thread" data-thread-key="2017/04/22/vue-目录结构/" data-title="vue项目中目录结构" data-url="http://yoursite.com/2017/04/22/vue-目录结构/"></div>  
+  
+</section>
+
+		
+	</div> <!-- col-md-9/col-md-12 -->	
 
 	
-		<div class="col-md-3">
-	<div id="sidebar">
-		
-				
+		<div id="side_meta">
+			
+      <div class="col-md-3">
+	      <div id="sidebar">
+	      
   <div class="form-group has-success has-feedback" id="site_search">
     <form class="site-search-form">
         <input type="text" id="st-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control" />
     </form>
   </div>  
 
-			
-				<style type="text/css">
+	      <style type="text/css">
   .cls_container{height:24px;overflow:hidden;}
   .cls_container ul{list-style-type:none;margin:0;padding:0;margin-left:0px;}
   .cls_container ul li{height:24px;line-height:24px;float:left;display:inline;}
@@ -447,13 +354,14 @@
 	var myscroll=new Scroll("myscroll",24);
 </script>
 
-			
-				
-			
-				
 
-			
-				
+	      <!-- toc -->	      
+	      	      
+
+	      	
+	      
+
+	      
 <div class="widget">
 	<h4 style="font-weight: bold; color: #333;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif">友情链接</h4>
 	<ul class="blogroll list-unstyled">
@@ -478,8 +386,7 @@
 </div>
 
 
-			
-				<div class="widget">
+	      <div class="widget">
 	<h4 style="font-weight: bold; color: #333;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif">近期评论</h4>
 	<ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="0" data-show-admin="1" data-excerpt-length="100" ></ul>
 	
@@ -497,19 +404,34 @@
 </div>
 
 
-
-			
-				<section id="recent-visitors" class="widget widget_recent_comments">
+	
+	      <section id="recent-visitors" class="widget widget_recent_comments">
 	<h4 style="font-weight: bold; color: #333;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif">最近访客</h4>
   	<div class="panelbody clearfix"><ul class="ds-recent-visitors" data-num-items="30"></ul></div>
-</section>
-			  
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+</section>    
+	      </div> <!-- sidebar -->
+      </div> <!-- col-md-3 -->
 
-	
-	
-</div> <!-- row-fluid -->
+		</div>
+			
+
+</div><!-- row -->
+
+
+	<script type="text/javascript">
+	  var duoshuoQuery = { short_name: 'rudy-yuan' };
+	  (function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';
+		ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	</script>
+
+
+
 	</div>
   </div>
   <div class="container-narrow">
