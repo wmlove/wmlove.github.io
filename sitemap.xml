@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/04/02/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%AE%9E%E4%BE%8B/</loc>
+    
+    <lastmod>2017-04-22T15:14:01.022Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/22/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</loc>
     
     <lastmod>2017-04-22T14:57:08.253Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2017/04/22/hello-world/</loc>
     
     <lastmod>2017-04-22T09:04:51.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/02/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%AE%9E%E4%BE%8B/</loc>
-    
-    <lastmod>2017-04-18T12:14:23.299Z</lastmod>
     
   </url>
   
