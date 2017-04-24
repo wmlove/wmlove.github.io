@@ -92,17 +92,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。 代码你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：  所有依赖">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/04/22/hello-world/index.html">
+<meta property="og:title" content="第一个vue-jd项目">
+<meta property="og:url" content="http://yoursite.com/2017/04/20/使用node,js实现网站在线聊天/index.html">
 <meta property="og:site_name" content="Hexo-wm">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-04-22T09:04:51.846Z">
+<meta property="og:description" content="在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。 代码你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：  所有依赖">
+<meta property="og:updated_time" content="2017-04-24T19:02:01.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="第一个vue-jd项目">
+<meta name="twitter:description" content="在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。 代码你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：  所有依赖">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/22/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/20/使用node,js实现网站在线聊天/"/>
 
 
 
 
 
-  <title>Hello World | Hexo-wm</title>
+  <title>第一个vue-jd项目 | Hexo-wm</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/22/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/20/使用node,js实现网站在线聊天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Min Wang">
@@ -276,7 +276,7 @@
             
             
               
-                Hello World
+                第一个vue-jd项目
               
             
           </h1>
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T17:04:51+08:00">
-                2017-04-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-20T16:48:03+08:00">
+                2017-04-20
               </time>
             
 
@@ -326,15 +326,28 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：</p>
+<ul>
+<li>所有依赖都在的package.json文件中声明。 它们不包含在zip，你将不得不执行npm install来获得它们。</li>
+<li>我们使用的是单独的JavaScript文件的配置和路由，使代码更易于管理。</li>
+<li>在routes文件，socket.io存储用户名，头像和房间的人作为socket对象本身的属性。 这为我们节省了大量的代码，并使得管理室方便。</li>
+<li>我们使用socket.io的客房配备了从另一个隔离的聊天，而这正是该功能是为开发的。<h2 id="运行聊天"><a href="#运行聊天" class="headerlink" title="运行聊天"></a>运行聊天</h2></li>
+</ul>
+<p>要运行聊天，你需要安装node.js的 ，从而使node和npm命令可以从你的终端进行调用。 下载代码并解压缩归档到一个名为的NodeJS – 私 -​​ 网上聊天的文件夹。 在此之后，导航到你从你的终端创建的文件夹：</p>
+<p>cd nodejs-private-webchat/</p>
+<p>运行ls（或目录，如果你是在Windows上）的命令应该显示app.js，的package.json和其它文件从存档。 然后，运行这个命令来下载所有的聊天系统所使用的库：</p>
+<p>npm install</p>
+<p>这将安 ​​装所有在的package.json描述的依赖关系。 这可能需要一两分钟。 当它完成后，运行以下命令来启动你自己的本地聊天，你可以在输入<a href="http://localhost:8080看到" target="_blank" rel="external">http://localhost:8080看到</a></p>
+<p>node app.js</p>
+<p>按CTRL + C停止它。 坏消息是，你不能邀请你的朋友来聊天，因为它是你自己的电脑上运行。 为了解决这个问题，你需要在Web服务器上运行它。 建立一个Web服务器自己来运行节点不是一个非常简单的过程，涉及了大量的服务器管理技巧。 幸运的是，它是很容易上手的云平台，如Heroku的，这是什么，我会告诉你下一个。</p>
+<h2 id="主办聊天在Heroku"><a href="#主办聊天在Heroku" class="headerlink" title="主办聊天在Heroku"></a>主办聊天在Heroku</h2><p>Heroku的是一个自动化的Web应用程序的部署和扩展一个云托管平台。 它提供了一个免费的计划，这足够满足我们的聊天不太繁忙的应用程序。 下面是你需要做的：</p>
+<ol>
+<li>创建一个帐户 ，如果你已经有一个。</li>
+<li>安装Heroku toolbelt为您的操作系统。 它会给你访问heroku从终端窗口的命令。</li>
+<li>初始化一个空的git仓库</li>
+<li>把你的代码到Heroku的。 这将部署它，给你，你可以与你的朋友分享一个网址。</li>
+</ol>
 
       
     </div>
@@ -371,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/23/vue2.0变化/" rel="next" title="vue2.0变化">
-                <i class="fa fa-chevron-left"></i> vue2.0变化
+              <a href="/2017/04/22/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -381,8 +394,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/20/使用node,js实现网站在线聊天/" rel="prev" title="第一个vue-jd项目">
-                第一个vue-jd项目 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/19/vue2.0的改变/" rel="prev" title="vue2.0改变">
+                vue2.0改变 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -501,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行聊天"><span class="nav-number">2.</span> <span class="nav-text">运行聊天</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主办聊天在Heroku"><span class="nav-number">3.</span> <span class="nav-text">主办聊天在Heroku</span></a></li></ol></div>
             
 
           </div>
