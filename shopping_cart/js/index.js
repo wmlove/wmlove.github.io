@@ -73,6 +73,7 @@ new Vue({
               // 判断
               if(product.productQuentity <= 1){
                   product.productQuentity = 1;
+                  alert('亲 商品已经是一件,不能再少了!');
                   return;
               }
               product.productQuentity -= 1;
