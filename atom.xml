@@ -58,11 +58,11 @@
   </entry>
   
   <entry>
-    <title>第一个vue-jd项目</title>
+    <title>使用node,js实现网站在线聊天</title>
     <link href="http://yoursite.com/2017/04/20/%E4%BD%BF%E7%94%A8node,js%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9/"/>
     <id>http://yoursite.com/2017/04/20/使用node,js实现网站在线聊天/</id>
     <published>2017-04-20T08:48:03.000Z</published>
-    <updated>2017-04-24T19:02:01.842Z</updated>
+    <updated>2017-04-24T19:05:34.822Z</updated>
     
     <content type="html"><![CDATA[<p>在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：</p>
