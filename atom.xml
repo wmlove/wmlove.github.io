@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-22T14:57:08.253Z</updated>
+  <updated>2017-04-24T09:56:57.587Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,341 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue2.0改变</title>
+    <link href="http://yoursite.com/2017/04/24/vue2.0%E7%9A%84%E6%94%B9%E5%8F%98/"/>
+    <id>http://yoursite.com/2017/04/24/vue2.0的改变/</id>
+    <published>2017-04-24T08:59:28.301Z</published>
+    <updated>2017-04-24T09:56:57.587Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue2-0版本"><a href="#一-vue2-0版本" class="headerlink" title="一.vue2.0版本"></a>一.vue2.0版本</h3><pre><code>vue2.0:
+bower info vue
+
+http://vuejs.org/
+</code></pre><p>到了2.0以后，有哪些变化?</p>
+<ol>
+<li>在每个组件模板，不在支持片段代码<br> 组件中模板:<pre><code>之前:
+    `&lt;template&gt;
+        &lt;h3&gt;我是组件&lt;/h3&gt;&lt;strong&gt;我是加粗标签&lt;/strong&gt;
+    &lt;/template&gt;`
+现在:  必须有根元素，包裹住所有的代码
+    `&lt;template id=&quot;aaa&quot;&gt;
+         &lt;div&gt;
+            &lt;h3&gt;我是组件&lt;/h3&gt;
+            &lt;strong&gt;我是加粗标签&lt;/strong&gt;
+         &lt;/div&gt;
+    &lt;/template&gt;`
+</code></pre></li>
+<li><p>关于组件定义<br> Vue.extend    这种方式，在2.0里面有，但是有一些改动，这种写法，即使能用，咱也不用——废弃</p>
+<p> Vue.component(组件名称,{    在2.0继续能用</p>
+<pre><code>data(){}
+methods:{}
+template:
+</code></pre><p> });</p>
+<p> 2.0推出一个组件，简洁定义方式：<br> var Home={</p>
+<pre><code>template:&apos;&apos;        -&gt;   Vue.extend()
+</code></pre><p> };</p>
+</li>
+<li>生命周期<br> 之前:<pre><code>init    
+created
+beforeCompile
+compiled
+ready        √    -&gt;     mounted
+beforeDestroy    
+destroyed
+</code></pre> 现在:<pre><code>beforeCreate    组件实例刚刚被创建,属性都没有
+created    实例已经创建完成，属性已经绑定
+beforeMount    模板编译之前
+mounted    模板编译之后，代替之前ready  *
+beforeUpdate    组件更新之前
+updated    组件更新完毕    *
+beforeDestroy    组件销毁前
+destroyed    组件销毁后
+</code></pre></li>
+<li><p>循环<br> 2.0里面默认就可以添加重复数据</p>
+<p> arr.forEach(function(item,index){</p>
+<p> });</p>
+<p> 去掉了隐式一些变量</p>
+<pre><code>$index    $key
+</code></pre><p> 之前:</p>
+<pre><code>v-for=&quot;(index,val) in array&quot;
+</code></pre><p> 现在:</p>
+<pre><code>v-for=&quot;(val,index) in array&quot;
+</code></pre></li>
+</ol>
+<ol>
+<li>track-by=”id”<br> 变成<pre><code>&lt;li v-for=&quot;(val,index) in list&quot; :key=&quot;index&quot;&gt;
+</code></pre></li>
+<li><p>自定义键盘指令<br> 之前：Vue.directive(‘on’).keyCodes.f1=17;    </p>
+<p> 现在:  Vue.config.keyCodes.ctrl=17</p>
+</li>
+<li><p>过滤器<br> 之前:</p>
+<pre><code>系统就自带很多过滤
+{{msg | currency}}
+{{msg | json}}
+....
+limitBy
+filterBy
+.....
+</code></pre><p> 一些简单功能，自己通过js实现</p>
+<p> 到了2.0， 内置过滤器，全部删除了</p>
+<p> lodash    工具库    _.debounce(fn,200)</p>
+<p> 自定义过滤器——还有</p>
+<pre><code>但是,自定义过滤器传参
+
+之前:    {{msg | toDou '12' '5'}}
+现在:     {{msg | toDou('12','5')}}
+</code></pre></li>
+<li><p>组件通信:<br> vm.$emit();<br> vm.$on();</p>
+<p> 父组件和子组件:</p>
+<p> 子组件想要拿到父组件数据:</p>
+<pre><code>通过  props
+</code></pre><p> 之前，子组件可以更改父组件信息，可以是同步  sync<br> 现在，不允许直接给父级的数据，做赋值操作</p>
+<p> 问题，就想更改：</p>
+<pre><code>a). 父组件每次传一个对象给子组件, 对象之间引用    √
+b). 只是不报错, mounted中转
+</code></pre></li>
+<li><p>可以单一事件管理组件通信:    vuex<br> var Event=new Vue();</p>
+<p> Event.$emit(事件名称, 数据)</p>
+<p> Event.$on(事件名称,function(data){</p>
+<pre><code>//data
+</code></pre><p> }.bind(this));</p>
+</li>
+<li><p>debounce    废弃<br>-&gt;   lodash</p>
+<pre><code>_.debounce(fn,时间)
+</code></pre><p>vue动画</p>
+</li>
+<li><p>vue路由</p>
+<p>transition 之前  属性<br><code>&lt;p transition=&quot;fade&quot;&gt;&lt;/p&gt;</code></p>
+<p>.fade-transition{}<br>.fade-enter{}<br>.fade-leave{}</p>
+<p>到2.0以后 transition 组件</p>
+<p>`<transition name="fade"></transition></p>
+<pre><code>运动东西(元素，属性、路由....)
+</code></pre><p>`</p>
+<p>class定义:<br>.fade-enter{}    //初始状态<br>.fade-enter-active{}  //变化成什么样  -&gt;  当元素出来(显示)</p>
+<p>.fade-leave{}<br>.fade-leave-active{} //变成成什么样   -&gt; 当元素离开(消失)</p>
+<p>如何animate.css配合用？</p>
+<pre><code>`&lt;transition enter-active-class=&quot;animated zoomInLeft&quot; leave-active-class=&quot;animated zoomOutRight&quot;&gt;
+     &lt;p v-show=&quot;show&quot;&gt;&lt;/p&gt;
+&lt;/transition&gt;`
+</code></pre><p>多个元素运动:</p>
+<pre><code>`&lt;transition-group enter-active-class=&quot;&quot; leave-active-class=&quot;&quot;&gt;
+&lt;p :key=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p :key=&quot;&quot;&gt;&lt;/p&gt;
+</code></pre><p>`</p>
+</li>
+<li><p>vue2.0 路由:<br><a href="http://router.vuejs.org/zh-cn/index.html" target="_blank" rel="external">http://router.vuejs.org/zh-cn/index.html</a><br>基本使用:</p>
+<ol>
+<li><p>布局<br><code>&lt;router-link to=&quot;/home&quot;&gt;主页&lt;/router-link&gt;</code></p>
+<p><code>&lt;router-view&gt;&lt;/router-view&gt;</code></p>
+</li>
+<li><p>路由具体写法<br> //组件<br> `var Home={</p>
+<pre><code>template:&apos;&lt;h3&gt;我是主页&lt;/h3&gt;&apos;
+</code></pre><p> };<code> </code>var News={</p>
+<pre><code>template:&apos;&lt;h3&gt;我是新闻&lt;/h3&gt;&apos;
+</code></pre><p> };`</p>
+<p> //配置路由<br> `const routes=[</p>
+<pre><code>{path:&apos;/home&apos;, componet:Home},
+{path:&apos;/news&apos;, componet:News},
+</code></pre><p> ];`</p>
+<p> //生成路由实例<br> `const router=new VueRouter({</p>
+<pre><code>routes
+</code></pre><p> });`</p>
+<p> //最后挂到vue上<br> `new Vue({</p>
+<pre><code>router,
+el:&apos;#box&apos;
+</code></pre><p> });`</p>
+</li>
+<li>重定向<br> 之前  router.rediect  废弃了<br> {path:’*’, redirect:’/home’}</li>
+</ol>
+</li>
+</ol>
+<p>路由嵌套:<br>    /user/username</p>
+<pre><code>const routes=[
+    {path:&apos;/home&apos;, component:Home},
+    {
+        path:&apos;/user&apos;,
+        component:User,
+        children:[  //核心
+            {path:&apos;username&apos;, component:UserDetail}
+        ]
+    },
+    {path:&apos;*&apos;, redirect:&apos;/home&apos;}  //404
+];
+
+user/strive/age/10
+
+:id
+:username
+:age
+</code></pre><p>路由实例方法:<br>    router.push({path:’home’});  //直接添加一个路由,表现切换路由，本质往历史记录里面添加一个<br>    router.replace({path:’news’}) //替换路由，不会往历史记录里面添加</p>
+<h2 id="vue-cli"><a href="#vue-cli" class="headerlink" title="vue-cli"></a>vue-cli</h2><h2 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h2><p>脚手架:  vue-loader</p>
+<h3 id="1-0-gt"><a href="#1-0-gt" class="headerlink" title="1.0  -&gt;"></a>1.0  -&gt;</h3><pre><code>`new Vue({
+  el: &apos;#app&apos;,
+  components:{App}
+})`
+</code></pre><h3 id="2-0-gt"><a href="#2-0-gt" class="headerlink" title="2.0-&gt;"></a>2.0-&gt;</h3><pre><code>`new Vue({
+  el: &apos;#app&apos;,
+  render: h =&gt; h(App)
+})`
+</code></pre><p>vue2.0<br>    <code>vue-loader和vue-router配合</code></p>
+<p>style-loader    css-loader</p>
+<pre><code>`style!css`
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue2-0版本&quot;&gt;&lt;a href=&quot;#一-vue2-0版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0版本&quot;&gt;&lt;/a&gt;一.vue2.0版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;vue2.0:
+bower info vue
+
+http:/
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router使用</title>
+    <link href="http://yoursite.com/2017/04/24/vue-router/"/>
+    <id>http://yoursite.com/2017/04/24/vue-router/</id>
+    <published>2017-04-24T05:32:07.903Z</published>
+    <updated>2017-04-24T05:36:46.104Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
+</code></pre><ul>
+<li><p>路由:<br>  vue-router</p>
+<pre><code>-&gt;  如何查看版本:
+    bower info vue-router
+</code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<ol>
+<li>下载vue-router模块<br> cnpm install vue-router@0.7.13</li>
+<li><p>import VueRouter from ‘vue-router’</p>
+</li>
+<li><p>Vue.use(VueRouter);</p>
+</li>
+<li><p>配置路由<br> var router=new VueRouter();<br> router.map({</p>
+<pre><code>路由规则
+</code></pre><p> })</p>
+</li>
+<li>开启<br> router.start(App,’#app’);</li>
+</ol>
+<p>注意:<br>    之前: index.html    -&gt;   <app></app><br>    现在: index.html    -&gt;   <div id="app"></div></p>
+<pre><code>App.vue    -&gt;   需要一个 &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;  根元素
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue1版本&quot;&gt;&lt;a href=&quot;#一-vue1版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue1版本&quot;&gt;&lt;/a&gt;一.vue1版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;home    news 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue2.0变化</title>
+    <link href="http://yoursite.com/2017/04/23/vue2.0%E5%8F%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2017/04/23/vue2.0变化/</id>
+    <published>2017-04-23T14:21:39.214Z</published>
+    <updated>2017-04-23T14:42:35.474Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue2-0"><a href="#一-vue2-0" class="headerlink" title="一.vue2.0"></a>一.vue2.0</h3><ul>
+<li>1.每个组件的变化 不再支持片段的变化</li>
+<li><p>组件中模板</p>
+<ul>
+<li>Vue.component(‘my-component’,{<br>  temponent:’html标签2.0必须有一个根元素包裹所有标签’</li>
+<li>})</li>
+</ul>
+</li>
+<li><p>2.组件的定义</p>
+<ul>
+<li>Vue.component(组件名称,{<br>  data(){},<br>  methods:{},<br>  template:{}</li>
+<li>}</li>
+<li>2.0推出一个组件,简洁定义方式:</li>
+<li>var Home = {template:”#aaa”}//类似于extend</li>
+<li>Vue.component(组件名称,Home)</li>
+</ul>
+</li>
+<li>3.生命周期<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue2-0&quot;&gt;&lt;a href=&quot;#一-vue2-0&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0&quot;&gt;&lt;/a&gt;一.vue2.0&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;1.每个组件的变化 不再支持片段的变化&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;组件中模板&lt;/p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue-cli--vue脚手架</title>
+    <link href="http://yoursite.com/2017/04/23/vue-cli/"/>
+    <id>http://yoursite.com/2017/04/23/vue-cli/</id>
+    <published>2017-04-23T13:29:42.052Z</published>
+    <updated>2017-04-23T14:06:10.994Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue-cli"><a href="#一-vue-cli" class="headerlink" title="一.vue-cli"></a>一.vue-cli</h3><ul>
+<li><p>本身集成很多项目模板</p>
+<ul>
+<li>webpack  –[Eslint代码规范,单元测试,2个缩进, 适合大型项目] config文件夹下的index.js改端口</li>
+<li>webpack-simple –[可以使用4个缩进]运行:npm run dev 改端口在mian.js文件中</li>
+<li><p>simple </p>
+</li>
+<li><p>browserify</p>
+</li>
+<li>browserify-simple<h3 id="二-基本使用流程"><a href="#二-基本使用流程" class="headerlink" title="二. 基本使用流程"></a>二. 基本使用流程</h3></li>
+</ul>
+</li>
+<li><ol>
+<li>npm install vue-cli -g 安装vue命令环境 , 查看版本 vue-version (验证是否安装成功)</li>
+</ol>
+</li>
+<li><ol>
+<li>vue init &lt;名称&gt; 本地文件夹名称</li>
+</ol>
+</li>
+<li><ol>
+<li>进入到生成的目录里面</li>
+</ol>
+</li>
+<li><ul>
+<li>cd xxx<ul>
+<li>npm install</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>4.npm run dev 运行</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue-cli&quot;&gt;&lt;a href=&quot;#一-vue-cli&quot; class=&quot;headerlink&quot; title=&quot;一.vue-cli&quot;&gt;&lt;/a&gt;一.vue-cli&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;本身集成很多项目模板&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;webpack  
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>vue项目中目录结构</title>
@@ -122,7 +457,7 @@
     <link href="http://yoursite.com/2017/04/02/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%AE%9E%E4%BE%8B/"/>
     <id>http://yoursite.com/2017/04/02/搭建一个vue实例/</id>
     <published>2017-04-02T08:48:03.000Z</published>
-    <updated>2017-04-22T15:14:01.022Z</updated>
+    <updated>2017-04-23T16:55:13.449Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-在github上创建一个项目例如-vue-jd"><a href="#1-在github上创建一个项目例如-vue-jd" class="headerlink" title="1. 在github上创建一个项目例如:vue-jd"></a>1. 在github上创建一个项目例如:vue-jd</h1><ul>
 <li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git" target="_blank" rel="external">https://github.com/wmlove/vue-jd.git</a><h1 id="2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行"><a href="#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行" class="headerlink" title="2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行"></a>2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</h1></li>
@@ -139,7 +474,7 @@
 <li>npm 介绍: <a href="http://blog.csdn.net/zzwwjjdj1/article/details/51982433" target="_blank" rel="external">http://blog.csdn.net/zzwwjjdj1/article/details/51982433</a></li>
 <li>3.1 安装命令行工具 npm install -g vue-cli</li>
 <li>3.2 vue -version 能看到版本号</li>
-<li>3.3 创建项目框架 vue init webpack vue-jd (创建一个基于”webpack”的项目,后面是项目名)</li>
+<li>3.3 创建项目框架 vue init webpack vue-jd[vue init webpack-simple vue-demo] (创建一个基于”webpack”的项目,后面是项目名)</li>
 <li>安装依赖 </li>
 <li>生成了项目以后是不能直接运行的,现在很多项目都依赖许许多多的模块,需要逐一安装,<br>ctrl+c 停掉刚生成项目的命令,cd vue-jd 进入项目跟目录, 用命令npm install 安装</li>
 <li>dependencies是项目依赖,</li>
