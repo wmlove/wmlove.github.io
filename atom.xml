@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-24T10:06:12.171Z</updated>
+  <updated>2017-04-23T14:42:35.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,80 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue2.0变化</title>
+    <link href="http://yoursite.com/2017/04/23/vue2.0%E5%8F%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2017/04/23/vue2.0变化/</id>
+    <published>2017-04-23T14:21:39.214Z</published>
+    <updated>2017-04-23T14:42:35.474Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue2-0"><a href="#一-vue2-0" class="headerlink" title="一.vue2.0"></a>一.vue2.0</h3><ul>
+<li>1.每个组件的变化 不再支持片段的变化</li>
+<li><p>组件中模板</p>
+<ul>
+<li>Vue.component(‘my-component’,{<br>  temponent:’html标签2.0必须有一个根元素包裹所有标签’</li>
+<li>})</li>
+</ul>
+</li>
+<li><p>2.组件的定义</p>
+<ul>
+<li>Vue.component(组件名称,{<br>  data(){},<br>  methods:{},<br>  template:{}</li>
+<li>}</li>
+<li>2.0推出一个组件,简洁定义方式:</li>
+<li>var Home = {template:”#aaa”}//类似于extend</li>
+<li>Vue.component(组件名称,Home)</li>
+</ul>
+</li>
+<li>3.生命周期<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue2-0&quot;&gt;&lt;a href=&quot;#一-vue2-0&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0&quot;&gt;&lt;/a&gt;一.vue2.0&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;1.每个组件的变化 不再支持片段的变化&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;组件中模板&lt;/p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/04/22/hello-world/"/>
+    <id>http://yoursite.com/2017/04/22/hello-world/</id>
+    <published>2017-04-22T09:04:51.846Z</published>
+    <updated>2017-04-22T09:04:51.846Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue2.0改变</title>
-    <link href="http://yoursite.com/2017/04/24/vue2.0%E7%9A%84%E6%94%B9%E5%8F%98/"/>
-    <id>http://yoursite.com/2017/04/24/vue2.0的改变/</id>
-    <published>2017-04-24T08:59:28.301Z</published>
-    <updated>2017-04-24T10:06:12.171Z</updated>
+    <link href="http://yoursite.com/2017/04/19/vue2.0%E7%9A%84%E6%94%B9%E5%8F%98/"/>
+    <id>http://yoursite.com/2017/04/19/vue2.0的改变/</id>
+    <published>2017-04-19T13:28:03.000Z</published>
+    <updated>2017-04-24T18:26:44.058Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue2-0版本"><a href="#一-vue2-0版本" class="headerlink" title="一.vue2.0版本"></a>一.vue2.0版本</h3><pre><code>vue2.0:
 bower info vue
@@ -210,98 +279,11 @@ http:/
   </entry>
   
   <entry>
-    <title>vue-router使用</title>
-    <link href="http://yoursite.com/2017/04/24/vue-router/"/>
-    <id>http://yoursite.com/2017/04/24/vue-router/</id>
-    <published>2017-04-24T05:32:07.903Z</published>
-    <updated>2017-04-24T05:36:46.104Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
-</code></pre><ul>
-<li><p>路由:<br>  vue-router</p>
-<pre><code>-&gt;  如何查看版本:
-    bower info vue-router
-</code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
-</li>
-</ul>
-<ul>
-<li></li>
-</ul>
-<ol>
-<li>下载vue-router模块<br> cnpm install vue-router@0.7.13</li>
-<li><p>import VueRouter from ‘vue-router’</p>
-</li>
-<li><p>Vue.use(VueRouter);</p>
-</li>
-<li><p>配置路由<br> var router=new VueRouter();<br> router.map({</p>
-<pre><code>路由规则
-</code></pre><p> })</p>
-</li>
-<li>开启<br> router.start(App,’#app’);</li>
-</ol>
-<p>注意:<br>    之前: index.html    -&gt;   <app></app><br>    现在: index.html    -&gt;   <div id="app"></div></p>
-<pre><code>App.vue    -&gt;   需要一个 &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;  根元素
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一-vue1版本&quot;&gt;&lt;a href=&quot;#一-vue1版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue1版本&quot;&gt;&lt;/a&gt;一.vue1版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;home    news 
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue2.0变化</title>
-    <link href="http://yoursite.com/2017/04/23/vue2.0%E5%8F%98%E5%8C%96/"/>
-    <id>http://yoursite.com/2017/04/23/vue2.0变化/</id>
-    <published>2017-04-23T14:21:39.214Z</published>
-    <updated>2017-04-23T14:42:35.474Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一-vue2-0"><a href="#一-vue2-0" class="headerlink" title="一.vue2.0"></a>一.vue2.0</h3><ul>
-<li>1.每个组件的变化 不再支持片段的变化</li>
-<li><p>组件中模板</p>
-<ul>
-<li>Vue.component(‘my-component’,{<br>  temponent:’html标签2.0必须有一个根元素包裹所有标签’</li>
-<li>})</li>
-</ul>
-</li>
-<li><p>2.组件的定义</p>
-<ul>
-<li>Vue.component(组件名称,{<br>  data(){},<br>  methods:{},<br>  template:{}</li>
-<li>}</li>
-<li>2.0推出一个组件,简洁定义方式:</li>
-<li>var Home = {template:”#aaa”}//类似于extend</li>
-<li>Vue.component(组件名称,Home)</li>
-</ul>
-</li>
-<li>3.生命周期<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一-vue2-0&quot;&gt;&lt;a href=&quot;#一-vue2-0&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0&quot;&gt;&lt;/a&gt;一.vue2.0&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;1.每个组件的变化 不再支持片段的变化&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;组件中模板&lt;/p
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>vue-cli--vue脚手架</title>
-    <link href="http://yoursite.com/2017/04/23/vue-cli/"/>
-    <id>http://yoursite.com/2017/04/23/vue-cli/</id>
-    <published>2017-04-23T13:29:42.052Z</published>
-    <updated>2017-04-23T14:06:10.994Z</updated>
+    <link href="http://yoursite.com/2017/04/17/vue-cli/"/>
+    <id>http://yoursite.com/2017/04/17/vue-cli/</id>
+    <published>2017-04-17T11:28:03.000Z</published>
+    <updated>2017-04-24T18:27:01.819Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue-cli"><a href="#一-vue-cli" class="headerlink" title="一.vue-cli"></a>一.vue-cli</h3><ul>
 <li><p>本身集成很多项目模板</p>
@@ -351,11 +333,56 @@ http:/
   </entry>
   
   <entry>
+    <title>vue-router使用</title>
+    <link href="http://yoursite.com/2017/04/16/vue-router/"/>
+    <id>http://yoursite.com/2017/04/16/vue-router/</id>
+    <published>2017-04-16T12:40:03.000Z</published>
+    <updated>2017-04-24T18:26:00.584Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
+</code></pre><ul>
+<li><p>路由:<br>  vue-router</p>
+<pre><code>-&gt;  如何查看版本:
+    bower info vue-router
+</code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<ol>
+<li>下载vue-router模块<br> cnpm install vue-router@0.7.13</li>
+<li><p>import VueRouter from ‘vue-router’</p>
+</li>
+<li><p>Vue.use(VueRouter);</p>
+</li>
+<li><p>配置路由<br> var router=new VueRouter();<br> router.map({</p>
+<pre><code>路由规则
+</code></pre><p> })</p>
+</li>
+<li>开启<br> router.start(App,’#app’);</li>
+</ol>
+<p>注意:<br>    之前: index.html    -&gt;   <app></app><br>    现在: index.html    -&gt;   <div id="app"></div></p>
+<pre><code>App.vue    -&gt;   需要一个 &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;  根元素
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一-vue1版本&quot;&gt;&lt;a href=&quot;#一-vue1版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue1版本&quot;&gt;&lt;/a&gt;一.vue1版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;home    news 
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue项目中目录结构</title>
-    <link href="http://yoursite.com/2017/04/22/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2017/04/22/vue-目录结构/</id>
-    <published>2017-04-22T14:51:16.228Z</published>
-    <updated>2017-04-22T14:57:08.253Z</updated>
+    <link href="http://yoursite.com/2017/04/09/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2017/04/09/vue-目录结构/</id>
+    <published>2017-04-09T11:48:03.000Z</published>
+    <updated>2017-04-24T18:25:24.420Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><ul>
 <li>index.html  </li>
@@ -419,33 +446,6 @@ http:/
       &lt;h3 id=&quot;一-简单的目录结构&quot;&gt;&lt;a href=&quot;#一-简单的目录结构&quot; class=&quot;headerlink&quot; title=&quot;一.简单的目录结构&quot;&gt;&lt;/a&gt;一.简单的目录结构&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;index.html  &lt;/li&gt;
 &lt;li&gt;main.js — 入口文件
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/04/22/hello-world/"/>
-    <id>http://yoursite.com/2017/04/22/hello-world/</id>
-    <published>2017-04-22T09:04:51.846Z</published>
-    <updated>2017-04-22T09:04:51.846Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
