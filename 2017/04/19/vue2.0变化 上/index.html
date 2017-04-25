@@ -95,13 +95,13 @@
 <meta name="description" content="一.vue2.0版本vue2.0: bower info vue  http://vuejs.org/ 到了2.0以后，有哪些变化?  在每个组件模板，不在支持片段代码 组件中模板:之前:     `&amp;lt;template&amp;gt;         &amp;lt;h3&amp;gt;我是组件&amp;lt;/h3&amp;gt;&amp;lt;strong&amp;gt;我是加粗标签&amp;lt;/strong&amp;gt;     &amp;lt;/templ">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue2.0改变">
-<meta property="og:url" content="http://yoursite.com/2017/04/19/vue2.0的改变/index.html">
+<meta property="og:title" content="vue2.0变化 上">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/vue2.0变化 上/index.html">
 <meta property="og:site_name" content="Hexo-wm">
 <meta property="og:description" content="一.vue2.0版本vue2.0: bower info vue  http://vuejs.org/ 到了2.0以后，有哪些变化?  在每个组件模板，不在支持片段代码 组件中模板:之前:     `&amp;lt;template&amp;gt;         &amp;lt;h3&amp;gt;我是组件&amp;lt;/h3&amp;gt;&amp;lt;strong&amp;gt;我是加粗标签&amp;lt;/strong&amp;gt;     &amp;lt;/templ">
-<meta property="og:updated_time" content="2017-04-24T18:26:44.058Z">
+<meta property="og:updated_time" content="2017-04-25T05:01:40.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue2.0改变">
+<meta name="twitter:title" content="vue2.0变化 上">
 <meta name="twitter:description" content="一.vue2.0版本vue2.0: bower info vue  http://vuejs.org/ 到了2.0以后，有哪些变化?  在每个组件模板，不在支持片段代码 组件中模板:之前:     `&amp;lt;template&amp;gt;         &amp;lt;h3&amp;gt;我是组件&amp;lt;/h3&amp;gt;&amp;lt;strong&amp;gt;我是加粗标签&amp;lt;/strong&amp;gt;     &amp;lt;/templ">
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/19/vue2.0的改变/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/19/vue2.0变化 上/"/>
 
 
 
 
 
-  <title>vue2.0改变 | Hexo-wm</title>
+  <title>vue2.0变化 上 | Hexo-wm</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/vue2.0的改变/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/vue2.0变化 上/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Min Wang">
@@ -276,7 +276,7 @@
             
             
               
-                vue2.0改变
+                vue2.0变化 上
               
             
           </h1>
@@ -289,7 +289,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T21:28:03+08:00">
                 2017-04-19
@@ -421,85 +421,9 @@ b). 只是不报错, mounted中转
 </li>
 <li><p>debounce    废弃<br>-&gt;   lodash</p>
 <pre><code>_.debounce(fn,时间)
-</code></pre><p>vue动画</p>
-</li>
-<li><p>vue路由</p>
-<p>transition 之前  属性<br><code>&lt;p transition=&quot;fade&quot;&gt;&lt;/p&gt;</code></p>
-<p>.fade-transition{}<br>.fade-enter{}<br>.fade-leave{}</p>
-<p>到2.0以后 transition 组件</p>
-<p>`<transition name="fade"></transition></p>
-<pre><code>运动东西(元素，属性、路由....)
-</code></pre><p>`</p>
-<p>class定义:<br>.fade-enter{}    //初始状态<br>.fade-enter-active{}  //变化成什么样  -&gt;  当元素出来(显示)</p>
-<p>.fade-leave{}<br>.fade-leave-active{} //变成成什么样   -&gt; 当元素离开(消失)</p>
-<p>如何animate.css配合用？</p>
-<pre><code>`&lt;transition enter-active-class=&quot;animated zoomInLeft&quot; leave-active-class=&quot;animated zoomOutRight&quot;&gt;
-     &lt;p v-show=&quot;show&quot;&gt;&lt;/p&gt;
-&lt;/transition&gt;`
-</code></pre><p>多个元素运动:</p>
-<pre><code>`&lt;transition-group enter-active-class=&quot;&quot; leave-active-class=&quot;&quot;&gt;
-&lt;p :key=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p :key=&quot;&quot;&gt;&lt;/p&gt;
-</code></pre><p>`</p>
-</li>
-<li><p>vue2.0 路由:<br><a href="http://router.vuejs.org/zh-cn/index.html" target="_blank" rel="external">http://router.vuejs.org/zh-cn/index.html</a><br>基本使用:</p>
-<ol>
-<li><p>布局<br><code>&lt;router-link to=&quot;/home&quot;&gt;主页&lt;/router-link&gt;</code></p>
-<p><code>&lt;router-view&gt;&lt;/router-view&gt;</code></p>
-</li>
-<li><p>路由具体写法<br> //组件<br> `var Home={</p>
-<pre><code>template:&apos;&lt;h3&gt;我是主页&lt;/h3&gt;&apos;
-</code></pre><p> };<code> </code>var News={</p>
-<pre><code>template:&apos;&lt;h3&gt;我是新闻&lt;/h3&gt;&apos;
-</code></pre><p> };`</p>
-<p> //配置路由<br> `const routes=[</p>
-<pre><code>{path:&apos;/home&apos;, componet:Home},
-{path:&apos;/news&apos;, componet:News},
-</code></pre><p> ];`</p>
-<p> //生成路由实例<br> `const router=new VueRouter({</p>
-<pre><code>routes
-</code></pre><p> });`</p>
-<p> //最后挂到vue上<br> `new Vue({</p>
-<pre><code>router,
-el:&apos;#box&apos;
-</code></pre><p> });`</p>
-</li>
-<li>重定向<br> 之前  router.rediect  废弃了<br> {path:’*’, redirect:’/home’}</li>
+</code></pre></li>
 </ol>
-</li>
-</ol>
-<p>路由嵌套:<br>    /user/username</p>
-<pre><code>const routes=[
-    {path:&apos;/home&apos;, component:Home},
-    {
-        path:&apos;/user&apos;,
-        component:User,
-        children:[  //核心
-            {path:&apos;username&apos;, component:UserDetail}
-        ]
-    },
-    {path:&apos;*&apos;, redirect:&apos;/home&apos;}  //404
-];
 
-user/strive/age/10
-
-:id
-:username
-:age
-</code></pre><p>路由实例方法:<br>    router.push({path:’home’});  //直接添加一个路由,表现切换路由，本质往历史记录里面添加一个<br>    router.replace({path:’news’}) //替换路由，不会往历史记录里面添加</p>
-<h2 id="vue-cli"><a href="#vue-cli" class="headerlink" title="vue-cli"></a>vue-cli</h2><h2 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h2><p>脚手架:  vue-loader</p>
-<h3 id="1-0-gt"><a href="#1-0-gt" class="headerlink" title="1.0  -&gt;"></a>1.0  -&gt;</h3><pre><code>`new Vue({
-  el: &apos;#app&apos;,
-  components:{App}
-})`
-</code></pre><h3 id="2-0-gt"><a href="#2-0-gt" class="headerlink" title="2.0-&gt;"></a>2.0-&gt;</h3><pre><code>`new Vue({
-  el: &apos;#app&apos;,
-  render: h =&gt; h(App)
-})`
-</code></pre><p>vue2.0<br>    <code>vue-loader和vue-router配合</code></p>
-<p>style-loader    css-loader</p>
-<pre><code>`style!css`
-</code></pre>
       
     </div>
 
@@ -535,8 +459,8 @@ user/strive/age/10
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/21/vue2.0变化/" rel="next" title="vue2.0变化">
-                <i class="fa fa-chevron-left"></i> vue2.0变化
+              <a href="/2017/04/21/vue2.0变化 下/" rel="next" title="vue2.0变化 下">
+                <i class="fa fa-chevron-left"></i> vue2.0变化 下
               </a>
             
           </div>
@@ -596,10 +520,10 @@ user/strive/age/10
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -620,7 +544,7 @@ user/strive/age/10
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -665,7 +589,7 @@ user/strive/age/10
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-vue2-0版本"><span class="nav-number">1.</span> <span class="nav-text">一.vue2.0版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-cli"><span class="nav-number"></span> <span class="nav-text">vue-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-install"><span class="nav-number"></span> <span class="nav-text">npm install</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-0-gt"><span class="nav-number">1.</span> <span class="nav-text">1.0  -></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-0-gt"><span class="nav-number">2.</span> <span class="nav-text">2.0-></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-vue2-0版本"><span class="nav-number">1.</span> <span class="nav-text">一.vue2.0版本</span></a></li></ol></div>
             
 
           </div>
@@ -697,7 +621,7 @@ user/strive/age/10
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

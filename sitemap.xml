@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/04/21/vue2.0%E5%8F%98%E5%8C%96/</loc>
+    <loc>http://yoursite.com/2017/04/19/vue2.0%E5%8F%98%E5%8C%96%20%E4%B8%8A/</loc>
     
-    <lastmod>2017-04-24T19:07:58.478Z</lastmod>
+    <lastmod>2017-04-25T05:01:40.352Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/21/vue2.0%E5%8F%98%E5%8C%96%20%E4%B8%8B/</loc>
+    
+    <lastmod>2017-04-25T02:58:11.693Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2017/04/17/vue-cli/</loc>
     
     <lastmod>2017-04-24T18:27:01.819Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/19/vue2.0%E7%9A%84%E6%94%B9%E5%8F%98/</loc>
-    
-    <lastmod>2017-04-24T18:26:44.058Z</lastmod>
     
   </url>
   
