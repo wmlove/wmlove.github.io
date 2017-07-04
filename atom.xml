@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-24T19:07:17.693Z</updated>
+  <updated>2017-04-25T15:41:51.152Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UI组件</title>
+    <link href="http://yoursite.com/2017/04/25/UI%E7%BB%84%E4%BB%B6/"/>
+    <id>http://yoursite.com/2017/04/25/UI组件/</id>
+    <published>2017-04-25T15:41:51.000Z</published>
+    <updated>2017-04-25T15:41:51.152Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>使用node.js实现网站在线聊天</title>
@@ -327,7 +341,7 @@ http:/
     <link href="http://yoursite.com/2017/04/16/vue-router/"/>
     <id>http://yoursite.com/2017/04/16/vue-router/</id>
     <published>2017-04-16T12:40:03.000Z</published>
-    <updated>2017-04-24T18:26:00.584Z</updated>
+    <updated>2017-04-25T06:45:08.613Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
 </code></pre><ul>
@@ -346,11 +360,32 @@ http:/
 </li>
 <li><p>Vue.use(VueRouter);</p>
 </li>
-<li><p>配置路由<br> var router=new VueRouter();<br> router.map({</p>
-<pre><code>路由规则
-</code></pre><p> })</p>
+<li><p>配置路由</p>
+<ul>
+<li><code>var router=new VueRouter();</code><br><code>import routerConfig from &#39;./router.config.js&#39;;</code><br><code>router.map(routerConfig);</code></li>
+<li>(1) router.config.js部分 </li>
+<li>// 引入</li>
+<li><code>import mine from &#39;./components/Mine.vue&#39;;</code><br><code>import News from &#39;./components/News.vue&#39;;</code></li>
+<li><p><code>import Login from &#39;./components/Login.vue&#39;;</code><br><code>import Reg from &#39;./components/Reg.vue&#39;;</code></p>
 </li>
-<li>开启<br> router.start(App,’#app’);</li>
+<li><p>// 导出<br>`export default {<br>  ‘/mine’:{</p>
+<pre><code>component:Mine,
+subRoutes:{//子路由
+    &apos;login&apos;:{
+        component:Login
+     },
+    &apos;reg&apos;:{
+        component:Reg
+    }
+}
+</code></pre><p>  },<br>  ‘/news’:{</p>
+<pre><code>component:News
+</code></pre><p>  }<br>}`</p>
+</li>
+</ul>
+</li>
+<li><p>开启<br> router.start(App,’#app’);</p>
+</li>
 </ol>
 <p>注意:<br>    之前: index.html    -&gt;   <app></app><br>    现在: index.html    -&gt;   <div id="app"></div></p>
 <pre><code>App.vue    -&gt;   需要一个 &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;  根元素
@@ -487,7 +522,7 @@ http:/
     <link href="http://yoursite.com/2017/04/01/hello-world/"/>
     <id>http://yoursite.com/2017/04/01/hello-world/</id>
     <published>2017-04-01T02:48:03.000Z</published>
-    <updated>2017-04-24T19:03:49.776Z</updated>
+    <updated>2017-05-24T12:05:50.652Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -498,6 +533,7 @@ http:/
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<p>在Github上部署静态网页<br><a href="http://blog.csdn.net/w1019945543/article/details/51955758" target="_blank" rel="external">http://blog.csdn.net/w1019945543/article/details/51955758</a></p>
 ]]></content>
     
     <summary type="html">
