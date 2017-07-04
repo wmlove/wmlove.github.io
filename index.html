@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo-wm |</title>
+  <title>Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-wm |">
+  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo-wmの博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo-wm |">
+<meta property="og:site_name" content="Hexo-wmの博客">
+<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-wm |">
+<meta name="twitter:title" content="Hexo-wmの博客">
+<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo-wm |" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -48,6 +51,8 @@
 		  <h1 class="header-author"><a href="/">Min Wang</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">只有拚搏，才是充实的生活。</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -64,8 +69,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -105,6 +108,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Min Wang</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>只有拚搏，才是充实的生活。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -221,29 +226,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>你可以从上面下载按钮抓取的源代码。 它有大量的注释，易于遵循。 先从app.js文件，并从那里读取。 这里有几件事情要寻找：</p>
-<ul>
-<li>所有依赖都在的package.json文件中声明。 它们不包含在zip，你将不得不执行npm install来获得它们。</li>
-<li>我们使用的是单独的JavaScript文件的配置和路由，使代码更易于管理。</li>
-<li>在routes文件，socket.io存储用户名，头像和房间的人作为socket对象本身的属性。 这为我们节省了大量的代码，并使得管理室方便。</li>
-<li>我们使用socket.io的客房配备了从另一个隔离的聊天，而这正是该功能是为开发的。<h2 id="运行聊天"><a href="#运行聊天" class="headerlink" title="运行聊天"></a>运行聊天</h2></li>
-</ul>
-<p>要运行聊天，你需要安装node.js的 ，从而使node和npm命令可以从你的终端进行调用。 下载代码并解压缩归档到一个名为的NodeJS – 私 -​​ 网上聊天的文件夹。 在此之后，导航到你从你的终端创建的文件夹：</p>
-<p>cd nodejs-private-webchat/</p>
-<p>运行ls（或目录，如果你是在Windows上）的命令应该显示app.js，的package.json和其它文件从存档。 然后，运行这个命令来下载所有的聊天系统所使用的库：</p>
-<p>npm install</p>
-<p>这将安 ​​装所有在的package.json描述的依赖关系。 这可能需要一两分钟。 当它完成后，运行以下命令来启动你自己的本地聊天，你可以在输入<a href="http://localhost:8080看到" target="_blank" rel="external">http://localhost:8080看到</a></p>
-<p>node app.js</p>
-<p>按CTRL + C停止它。 坏消息是，你不能邀请你的朋友来聊天，因为它是你自己的电脑上运行。 为了解决这个问题，你需要在Web服务器上运行它。 建立一个Web服务器自己来运行节点不是一个非常简单的过程，涉及了大量的服务器管理技巧。 幸运的是，它是很容易上手的云平台，如Heroku的，这是什么，我会告诉你下一个。</p>
-<h2 id="主办聊天在Heroku"><a href="#主办聊天在Heroku" class="headerlink" title="主办聊天在Heroku"></a>主办聊天在Heroku</h2><p>Heroku的是一个自动化的Web应用程序的部署和扩展一个云托管平台。 它提供了一个免费的计划，这足够满足我们的聊天不太繁忙的应用程序。 下面是你需要做的：</p>
-<ol>
-<li>创建一个帐户 ，如果你已经有一个。</li>
-<li>安装Heroku toolbelt为您的操作系统。 它会给你访问heroku从终端窗口的命令。</li>
-<li>初始化一个空的git仓库</li>
-<li>把你的代码到Heroku的。 这将部署它，给你，你可以与你的朋友分享一个网址。</li>
-</ol>
-
+        <p>在本教程中，我们将构建一个实时的聊天系统的Node.js和socket.io库。 聊天允许用户创建私人聊天室，他们可以与朋友分享。 适合于虚拟形象，我们将使用的gravatar 。 您可以使用节点本地运行的聊天，或者它推到Heroku的或不同的云服务提供商。<br>
+        
+          <a class="article-more-a" href="/2017/04/23/使用node.js实现网站在线聊天/#more">more >></a>
+        
       
 
       
@@ -251,7 +237,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -671,8 +679,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
       
       
@@ -684,15 +690,13 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -711,6 +715,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -756,43 +772,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">wm&lt;br&gt;&lt;br&gt;热爱大海与冷笑话，&lt;br&gt;目前是一枚前端</div>
   	  	
     	</section>
     

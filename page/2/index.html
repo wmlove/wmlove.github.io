@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo-wm |</title>
+  <title>Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-wm |">
+  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo-wmの博客">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo-wm |">
+<meta property="og:site_name" content="Hexo-wmの博客">
+<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-wm |">
+<meta name="twitter:title" content="Hexo-wmの博客">
+<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo-wm |" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -48,6 +51,8 @@
 		  <h1 class="header-author"><a href="/">Min Wang</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">只有拚搏，才是充实的生活。</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -64,8 +69,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -105,6 +108,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Min Wang</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>只有拚搏，才是充实的生活。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -370,6 +375,99 @@ subRoutes:{//子路由
 
 
   
+    <article id="post-vue-目录结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/16/vue-目录结构/">vue项目中目录结构</a>
+    </h1>
+  
+
+        
+        <a href="/2016/01/16/vue-目录结构/" class="archive-article-date">
+  	<time datetime="2016-01-16T05:58:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><ul>
+<li>index.html  </li>
+<li>main.js — 入口文件</li>
+<li>App.vue — vue文件,官方推荐命名法 : 首字母大写<ul>
+<li>.vue文件:  放置的是vue组件代码<ul>
+<li>html部分 用template标签</li>
+<li>css部分  用style标签</li>
+<li>js 部分  用script标签</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>package.json —工程文件(项目依赖/名称/配置)<ul>
+<li>npm init –yes生成</li>
+</ul>
+</li>
+<li>webpack.config.js — webpack配置文件</li>
+<li>
+        
+          <a class="article-more-a" href="/2016/01/16/vue-目录结构/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/01/16/vue-目录结构/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
@@ -424,8 +522,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
       
       
@@ -437,15 +533,13 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -464,6 +558,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -509,43 +615,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">wm&lt;br&gt;&lt;br&gt;热爱大海与冷笑话，&lt;br&gt;目前是一枚前端</div>
   	  	
     	</section>
     

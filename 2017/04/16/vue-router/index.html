@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>vue-router使用 | Hexo-wm |</title>
+  <title>vue-router使用 | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一.vue1版本home    news   路由:  vue-router -&amp;gt;  如何查看版本:     bower info vue-router   路由使用版本: 0.7.13配合vue-loader使用:       下载vue-router模块 cnpm install vue-router@0.7.13 import VueRouter from ‘vue-router’">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-router使用">
 <meta property="og:url" content="http://yoursite.com/2017/04/16/vue-router/index.html">
-<meta property="og:site_name" content="Hexo-wm |">
+<meta property="og:site_name" content="Hexo-wmの博客">
 <meta property="og:description" content="一.vue1版本home    news   路由:  vue-router -&amp;gt;  如何查看版本:     bower info vue-router   路由使用版本: 0.7.13配合vue-loader使用:       下载vue-router模块 cnpm install vue-router@0.7.13 import VueRouter from ‘vue-router’">
 <meta property="og:updated_time" content="2017-04-25T06:45:08.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-router使用">
 <meta name="twitter:description" content="一.vue1版本home    news   路由:  vue-router -&amp;gt;  如何查看版本:     bower info vue-router   路由使用版本: 0.7.13配合vue-loader使用:       下载vue-router模块 cnpm install vue-router@0.7.13 import VueRouter from ‘vue-router’">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo-wm |" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -53,6 +53,8 @@
 		  <h1 class="header-author"><a href="/">Min Wang</a></h1>
 		</hgroup>
 		
+		<p class="header-subtitle">只有拚搏，才是充实的生活。</p>
+		
 
 		<nav class="header-menu">
 			<ul>
@@ -69,8 +71,6 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -110,6 +110,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">Min Wang</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>只有拚搏，才是充实的生活。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -390,8 +392,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
     
       
-      
-      
     
       
       
@@ -403,15 +403,13 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -430,6 +428,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vue2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -475,43 +485,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">wm&lt;br&gt;&lt;br&gt;热爱大海与冷笑话，&lt;br&gt;目前是一枚前端</div>
   	  	
     	</section>
     
