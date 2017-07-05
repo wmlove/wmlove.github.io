@@ -85,10 +85,11 @@
     <link href="http://yoursite.com/2017/04/21/vue2.0%E5%8F%98%E5%8C%96%20%E4%B8%8B/"/>
     <id>http://yoursite.com/2017/04/21/vue2.0变化 下/</id>
     <published>2017-04-21T11:48:03.000Z</published>
-    <updated>2017-04-25T02:58:11.693Z</updated>
+    <updated>2017-07-05T06:29:37.958Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue2-0-vue动画-vue路由"><a href="#一-vue2-0-vue动画-vue路由" class="headerlink" title="一.vue2.0 vue动画+vue路由"></a>一.vue2.0 vue动画+vue路由</h3><ol>
 <li><p>vue动画</p>
+<a id="more"></a>
 <p>transition 之前  属性<br><code>&lt;p transition=&quot;fade&quot;&gt;&lt;/p&gt;</code></p>
 <p>.fade-transition{}<br>.fade-enter{}<br>.fade-leave{}</p>
 <p>到2.0以后 transition 组件</p>
@@ -167,10 +168,15 @@ user/strive/age/10
     
     <summary type="html">
     
-      &lt;h3 id=&quot;一-vue2-0-vue动画-vue路由&quot;&gt;&lt;a href=&quot;#一-vue2-0-vue动画-vue路由&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0 vue动画+vue路由&quot;&gt;&lt;/a&gt;一.vue2.0 vue动画+vue路由&lt;/h3&gt;&lt;
+      &lt;h3 id=&quot;一-vue2-0-vue动画-vue路由&quot;&gt;&lt;a href=&quot;#一-vue2-0-vue动画-vue路由&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0 vue动画+vue路由&quot;&gt;&lt;/a&gt;一.vue2.0 vue动画+vue路由&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;vue动画&lt;/p&gt;
     
     </summary>
     
+      <category term="vue文章" scheme="http://yoursite.com/categories/vue%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
     
   </entry>
   
@@ -179,13 +185,13 @@ user/strive/age/10
     <link href="http://yoursite.com/2017/04/19/vue2.0%E5%8F%98%E5%8C%96%20%E4%B8%8A/"/>
     <id>http://yoursite.com/2017/04/19/vue2.0变化 上/</id>
     <published>2017-04-19T13:28:03.000Z</published>
-    <updated>2017-04-25T05:01:40.352Z</updated>
+    <updated>2017-07-05T06:29:40.570Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue2-0版本"><a href="#一-vue2-0版本" class="headerlink" title="一.vue2.0版本"></a>一.vue2.0版本</h3><pre><code>vue2.0:
 bower info vue
 
 http://vuejs.org/
-</code></pre><p>到了2.0以后，有哪些变化?</p>
+</code></pre><p>到了2.0以后，有哪些变化?<br><a id="more"></a></p>
 <ol>
 <li>在每个组件模板，不在支持片段代码<br> 组件中模板:<pre><code>之前:
     `&lt;template&gt;
@@ -285,10 +291,15 @@ b). 只是不报错, mounted中转
       &lt;h3 id=&quot;一-vue2-0版本&quot;&gt;&lt;a href=&quot;#一-vue2-0版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue2.0版本&quot;&gt;&lt;/a&gt;一.vue2.0版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;vue2.0:
 bower info vue
 
-http:/
+http://vuejs.org/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;到了2.0以后，有哪些变化?&lt;br&gt;
     
     </summary>
     
+      <category term="vue文章" scheme="http://yoursite.com/categories/vue%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
     
   </entry>
   
@@ -297,7 +308,7 @@ http:/
     <link href="http://yoursite.com/2017/04/17/vue-cli/"/>
     <id>http://yoursite.com/2017/04/17/vue-cli/</id>
     <published>2017-04-17T11:28:03.000Z</published>
-    <updated>2017-04-24T18:27:01.819Z</updated>
+    <updated>2017-07-05T06:28:27.438Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue-cli"><a href="#一-vue-cli" class="headerlink" title="一.vue-cli"></a>一.vue-cli</h3><ul>
 <li><p>本身集成很多项目模板</p>
@@ -308,7 +319,8 @@ http:/
 </li>
 <li><p>browserify</p>
 </li>
-<li>browserify-simple<h3 id="二-基本使用流程"><a href="#二-基本使用流程" class="headerlink" title="二. 基本使用流程"></a>二. 基本使用流程</h3></li>
+<li>browserify-simple<a id="more"></a>
+<h3 id="二-基本使用流程"><a href="#二-基本使用流程" class="headerlink" title="二. 基本使用流程"></a>二. 基本使用流程</h3></li>
 </ul>
 </li>
 <li><ol>
@@ -339,10 +351,22 @@ http:/
       &lt;h3 id=&quot;一-vue-cli&quot;&gt;&lt;a href=&quot;#一-vue-cli&quot; class=&quot;headerlink&quot; title=&quot;一.vue-cli&quot;&gt;&lt;/a&gt;一.vue-cli&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;本身集成很多项目模板&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;webpack  
+&lt;li&gt;webpack  –[Eslint代码规范,单元测试,2个缩进, 适合大型项目] config文件夹下的index.js改端口&lt;/li&gt;
+&lt;li&gt;webpack-simple –[可以使用4个缩进]运行:npm run dev 改端口在mian.js文件中&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;simple &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;browserify&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;browserify-simple
     
     </summary>
     
+      <category term="vue文章" scheme="http://yoursite.com/categories/vue%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="vue1" scheme="http://yoursite.com/tags/vue1/"/>
+    
+      <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
     
   </entry>
   
@@ -351,7 +375,7 @@ http:/
     <link href="http://yoursite.com/2017/04/16/vue-router/"/>
     <id>http://yoursite.com/2017/04/16/vue-router/</id>
     <published>2017-04-16T12:40:03.000Z</published>
-    <updated>2017-04-25T06:45:08.613Z</updated>
+    <updated>2017-07-05T06:28:29.422Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
 </code></pre><ul>
@@ -361,6 +385,7 @@ http:/
 </code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
 </li>
 </ul>
+<a id="more"></a>
 <ul>
 <li></li>
 </ul>
@@ -405,10 +430,21 @@ subRoutes:{//子路由
     
       &lt;h3 id=&quot;一-vue1版本&quot;&gt;&lt;a href=&quot;#一-vue1版本&quot; class=&quot;headerlink&quot; title=&quot;一.vue1版本&quot;&gt;&lt;/a&gt;一.vue1版本&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;home    news 
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p
+&lt;li&gt;&lt;p&gt;路由:&lt;br&gt;  vue-router&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-&amp;gt;  如何查看版本:
+    bower info vue-router
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  路由使用版本: 0.7.13&lt;br&gt;配合vue-loader使用:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+      <category term="vue文章" scheme="http://yoursite.com/categories/vue%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="vue1" scheme="http://yoursite.com/tags/vue1/"/>
+    
+      <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
     
   </entry>
   
@@ -417,10 +453,10 @@ subRoutes:{//子路由
     <link href="http://yoursite.com/2017/04/02/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%AE%9E%E4%BE%8B/"/>
     <id>http://yoursite.com/2017/04/02/搭建一个vue实例/</id>
     <published>2017-04-02T08:48:03.000Z</published>
-    <updated>2017-04-23T16:55:13.449Z</updated>
+    <updated>2017-07-05T06:29:35.049Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-在github上创建一个项目例如-vue-jd"><a href="#1-在github上创建一个项目例如-vue-jd" class="headerlink" title="1. 在github上创建一个项目例如:vue-jd"></a>1. 在github上创建一个项目例如:vue-jd</h1><ul>
-<li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git" target="_blank" rel="external">https://github.com/wmlove/vue-jd.git</a><h1 id="2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行"><a href="#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行" class="headerlink" title="2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行"></a>2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</h1></li>
+<li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git" target="_blank" rel="external">https://github.com/wmlove/vue-jd.git</a><h1 id="2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行"><a href="#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行" class="headerlink" title="2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行"></a>2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</h1><a id="more"></a></li>
 <li>2.1 把github上的项目拉下来. 如:git clone 地址 </li>
 <li>2.2 cd vue-jd 进入托管项目的跟目录</li>
 <li>2.2 git add 添加</li>
@@ -445,10 +481,15 @@ subRoutes:{//子路由
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-在github上创建一个项目例如-vue-jd&quot;&gt;&lt;a href=&quot;#1-在github上创建一个项目例如-vue-jd&quot; class=&quot;headerlink&quot; title=&quot;1. 在github上创建一个项目例如:vue-jd&quot;&gt;&lt;/a&gt;1. 在github
+      &lt;h1 id=&quot;1-在github上创建一个项目例如-vue-jd&quot;&gt;&lt;a href=&quot;#1-在github上创建一个项目例如-vue-jd&quot; class=&quot;headerlink&quot; title=&quot;1. 在github上创建一个项目例如:vue-jd&quot;&gt;&lt;/a&gt;1. 在github上创建一个项目例如:vue-jd&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;复制地址例如:&lt;a href=&quot;https://github.com/wmlove/vue-jd.git&quot;&gt;https://github.com/wmlove/vue-jd.git&lt;/a&gt;&lt;h1 id=&quot;2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行&quot;&gt;&lt;a href=&quot;#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行&quot; class=&quot;headerlink&quot; title=&quot;2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行&quot;&gt;&lt;/a&gt;2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行&lt;/h1&gt;
     
     </summary>
     
+      <category term="vue文章" scheme="http://yoursite.com/categories/vue%E6%96%87%E7%AB%A0/"/>
+    
+    
+      <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
     
   </entry>
   
@@ -485,7 +526,7 @@ subRoutes:{//子路由
     <link href="http://yoursite.com/2016/01/16/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
     <id>http://yoursite.com/2016/01/16/vue-目录结构/</id>
     <published>2016-01-16T05:58:41.000Z</published>
-    <updated>2017-07-04T16:05:33.652Z</updated>
+    <updated>2017-07-05T06:28:30.886Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><ul>
 <li>index.html  </li>
@@ -504,9 +545,9 @@ subRoutes:{//子路由
 </ul>
 </li>
 <li>webpack.config.js — webpack配置文件</li>
-<li><a id="more"></a>
-<the rest="" of="" contents="" |="" 余下全文=""><!-- more -->
-<h3 id="二-ES6-模块化开发"><a href="#二-ES6-模块化开发" class="headerlink" title="二.ES6:模块化开发"></a>二.ES6:模块化开发</h3></the></li>
+</ul>
+<a id="more"></a>
+<h3 id="二-ES6-模块化开发"><a href="#二-ES6-模块化开发" class="headerlink" title="二.ES6:模块化开发"></a>二.ES6:模块化开发</h3><ul>
 <li>导出模块:<ul>
 <li>export default {}</li>
 </ul>
