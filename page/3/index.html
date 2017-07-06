@@ -323,23 +323,10 @@
       
         <h5 id="在HTML中引入css的其中的两个方法："><a href="#在HTML中引入css的其中的两个方法：" class="headerlink" title="在HTML中引入css的其中的两个方法："></a>在HTML中引入css的其中的两个方法：</h5><p>导入式和链接式的目的都是将一个独立的css文件引入一个文件中，二者的区别不大，事实上，二者最大的区别在于链接式使用html的标记引入外部css文件，而使用导入式则是使用css规则引入外部css文件。因此它们的语法也不同。<br><br>1.如果使用链接式，需要使用如下的语句引入外部css文件：</p>
 <pre><code>&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;type=&quot;text/css&quot; /&gt;
-</code></pre><p>2.如果使用导入式，则需要使用如下语句：</p>
-<pre><code>&lt;styletype=&quot;text/css&quot;&gt;
-    @import &quot;style.css&quot;
-&lt;/style&gt;
-</code></pre><p>此外，采用这两种方式后的现实效果也略有区别。使用链接式时，会在装载页面主体部分之前装载css文件，这样现实出来的页面从一开始就是带有样式效果的，而使用导入式时，会在整个页面装载完成之后再装载css文件，对于有的浏览器来说，在一些情况下，如果页面文件的体积比较大，则会出现先现实无样式的页面，闪烁一下之后再出现设置样式的效果。从浏览者的感受来说，这是使用导入式的一个缺陷。<br><br>对于一个较大的网站，为了便于维护，可能会希望把所有的css样式分别放在几个css文件中，这样如果使用链接式引入，就需要几个语句分别导入css文件。如果要调整css文件的分类，就需要同时调整html文件。这对于维护工作来说，是一个缺陷。如果使用导入式，则可以只引进一个总的css文件，在这个文件中再导入其他独立的css文件；而链接式则不具备这个特征。<br><br>因此这里给大家的建议是，如果仅引入一个css文件，则使用链接方式；如果需要引入多个css文件，则首先用链接式引入一个“目录”css文件，这个“目录”css文件中再使用导入式引入其他css文件。<br><br>但是如果希望通过JavaScript来动态决定引入哪个css文件，则必须使用链接方式才能实现。<br></p>
-<h5 id="如何将多个CSS文件导入到一个CSS文件中？"><a href="#如何将多个CSS文件导入到一个CSS文件中？" class="headerlink" title="如何将多个CSS文件导入到一个CSS文件中？"></a>如何将多个CSS文件导入到一个CSS文件中？</h5><p>答案：</p>
-<ul>
-<li><p>你可以写了三个css样式表</p>
-<pre><code>css_red.css  ， css_blue.css  ， css_green.css
-这样你就可以写一个主样式   style.css  把三个样式表都装进去：
-@import &quot;css_red.css&quot;; 
-@import &quot;css_blue.css&quot;;
-@import &quot;css_green.css&quot;;
-</code></pre></li>
-</ul>
-<p>调用的时候只调用   style.css  就行了。</p>
-
+</code></pre>
+        
+          <a class="article-more-a" href="/2015/07/16/多个css文件合并到一个css中/#more">more >></a>
+        
       
 
       
