@@ -780,47 +780,11 @@ tags: #文章標籤 可以省略
   </entry>
   
   <entry>
-    <title>web前端开发工程师技能树</title>
-    <link href="http://yoursite.com/2016/02/20/web%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E6%A0%91/"/>
-    <id>http://yoursite.com/2016/02/20/web前端技能树/</id>
-    <published>2016-02-20T09:05:17.000Z</published>
-    <updated>2017-07-06T09:33:14.605Z</updated>
-    
-    <content type="html"><![CDATA[<p>有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:<br><br><a id="more"></a></p>
-<ul>
-<li>1.必须掌握HTML5的新特性 + CSS3的动画 + 原生JavaScript的用法</li>
-<li>2.要掌握web开发的一些框架如 React Angular Vue Awalon Backbone ,类库如 Lodash Underscope jQuery Zepto Prototype, 插件如 iScroll jqGrid Owl.Carousel 可视化插件HighChart eChart</li>
-<li>3.要会移动应用开发 React-Native  Phonegap  Sencha Touch   H5Builder</li>
-<li>4.要会响应式布局和微信应用的开发</li>
-<li>5.能解决css,js跨浏览器的兼容性问题，了解常见的引起内存泄露的原因及解决方法</li>
-<li>6.要懂得网页优化 CSS优化和JavaScript优化方法  SEO优化方法和分析工具</li>
-<li>7.要熟悉http协议 网络安全-跨站脚本攻击(Cross-site scripting) /跨站请求伪造(Cross Site Request Forgery)/ 中间人劫持的防御方法</li>
-<li>8.要掌握web服务器端的开发语言Java/PHP/Python/Ruby/.Net中的一种 和 数据库如MySQL/SQlite3</li>
-<li>9.要熟练应用开发工具 如Sublime-Text3/WebStrom node+express/node+koa/node+hapi  gulp/grunt bower  PhotoShop SVG编辑器 , 各种浏览器的自带调试功能 和性能优化工具YSlow/PageSpeed<br> 在线工具如JsFiddle/CodePen/RunJS /CodeCademy</li>
-<li>10.会开发自定义插件,能够进行框架选择 架构和接口设计  制定编程规范</li>
-<li>11.了解UI的设计模式和方法，有敏锐的用户体验意识。</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:&lt;br&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web技能" scheme="http://yoursite.com/categories/web%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="技能" scheme="http://yoursite.com/tags/%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue项目中目录结构</title>
-    <link href="http://yoursite.com/2016/01/16/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2016/01/16/vue-目录结构/</id>
-    <published>2016-01-16T05:58:41.000Z</published>
-    <updated>2017-07-05T06:28:30.886Z</updated>
+    <link href="http://yoursite.com/2016/03/16/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2016/03/16/vue-目录结构/</id>
+    <published>2016-03-16T05:58:41.000Z</published>
+    <updated>2017-07-06T12:32:59.714Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><ul>
 <li>index.html  </li>
@@ -892,6 +856,167 @@ tags: #文章標籤 可以省略
       <category term="vue1" scheme="http://yoursite.com/tags/vue1/"/>
     
       <category term="vue2" scheme="http://yoursite.com/tags/vue2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html5+css3新特性</title>
+    <link href="http://yoursite.com/2016/03/06/html5-css3%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>http://yoursite.com/2016/03/06/html5-css3新特性/</id>
+    <published>2016-03-06T09:36:25.000Z</published>
+    <updated>2017-07-06T09:57:42.102Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>1.HTML5的新特性 <!-- 语义化标签，canvas，音频视频，表单元素，API接口 --><ul>
+<li>1)用于绘画的 canvas 元素</li>
+<li>2)用于媒介回放的 video 和 audio 元素    —-定时器</li>
+<li>3)对本地离线存储的更好的支持(localStorage, sessionStorage)</li>
+<li>4)新的特殊内容元素，比如 article、footer、header、nav、section</li>
+<li>5)新的表单控件，比如 calendar、date、time、email、url、search</li>
+</ul>
+</li>
+<li><p>2.CSS3的特效 / 动画</p>
+<ul>
+<li>1.CSS3 选择器（Selector）</li>
+<li>2.@Font-face 特性<br><ul>
+<li>加载字体样式,也能加载服务器端的字体文件,让客户端显示没有安装的文字</li>
+<li>@font-face { font-family: BorderWeb;  src:url(BORDERW0.eot); }</li>
+</ul>
+</li>
+<li>3.Word-wrap &amp; Text-overflow 样式<ul>
+<li>Word-wrap : break-word; 允许长单词换行到下一行（默认值normal）</li>
+<li>text-overflow : clip|ellipsis|string; 规定当文本溢出包含元素时显示情况</li>
+</ul>
+</li>
+<li>4.文字渲染（Text-decoration）<ul>
+<li>Text-fill-color: 文字内部填充颜色</li>
+<li>Text-stroke-color: 文字边界填充颜色</li>
+<li>Text-stroke-width: 文字边界宽度</li>
+</ul>
+</li>
+<li>5.CSS3 的多列布局（multi-column layout）<ul>
+<li>Column-count：表示布局几列。</li>
+<li>Column-rule：表示列与列之间的间隔条的样式。</li>
+<li>Column-gap：表示列于列之间的间隔。</li>
+</ul>
+</li>
+<li>6.边框和颜色（color, border）<ul>
+<li>提供颜色透明度支持（rgba中a指透明度）；</li>
+<li>border提供圆角的支持；</li>
+</ul>
+</li>
+<li>7.CSS3 的渐变效果（Gradient）<ul>
+<li>线性渐变: 左上(0% 0%)到右上(0% 100%)即从左到右水平渐变（linear）</li>
+<li>经向渐变：从一个圆到一个圆的渐变（radial）</li>
+</ul>
+</li>
+<li>8.CSS3 的阴影（Shadow）和反射（Reflect）效果<ul>
+<li>对于文字阴影：表示 X 轴方向阴影向右 5px,Y 轴方向阴影向下 2px, 而阴影模糊半径 6px，颜色为 rgba(64, 64, 64, 0.5)。其中偏移量可以为负值，负值则反方向。元素阴影也类似。</li>
+<li>text-shadow:5px 2px 6px rgba(64, 64, 64, 0.5); </li>
+<li>box-shadow:3px 3px 3px rgba(0, 64, 128, 0.3);</li>
+<li>反射：-webkit-box-reflect: below 10px</li>
+</ul>
+</li>
+<li>9.CSS3 的背景效果<ul>
+<li>Background Clip 确定背景画区 | Background Origin确定背景位置 </li>
+<li>Background Size 调整背景图片的大小 | Background Break 元素可以被分成几个独立的盒子 | CSS3 中支持多背景图片</li>
+</ul>
+</li>
+<li>10.CSS3 的盒子模型（flex box）<ul>
+<li>display: flex; </li>
+<li>justify-content:center; </li>
+<li>align-item:center;</li>
+</ul>
+</li>
+<li>css中  盒模型：w3c标准：<ul>
+<li>width + padding + border +margin                   + IE标准：width(padding + border）+margin</li>
+</ul>
+</li>
+<li><p>11.CSS3 中Transitions, Transforms和Animation 过渡,变换,动画</p>
+<ul>
+<li>过渡：transition: property  duration  timing-function  delay;  </li>
+<li><p>eg：</p>
+<pre><code>div {
+    width:100px; 
+    height:100px; 
+    background:blue; 
+    transition:width 2s liner 1s; 
+}
+div:hover { width:300px; }
+</code></pre></li>
+<li>变换：transform:rotate(7deg) skew(5deg) scale(1.5) translate(120px,0); </li>
+<li>动画：animation : </li>
+<li><p>eg:</p>
+<pre><code>div{ 
+    width:100px;
+    height:100px;
+    background:blue;
+    position:relative;
+    animation : mymove 5s infinite;
+}
+@keyframes mymove {  
+    //兼容-webkit-animation
+    from {left:0px;}
+    to {left:200px;}
+}
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;1.HTML5的新特性 &lt;!-- 语义化标签，canvas，音频视频，表单元素，API接口 --&gt;&lt;ul&gt;
+&lt;li&gt;1)用于绘画的 canvas 元素&lt;/li&gt;
+&lt;li&gt;2)用于媒介回放的 video 和 audio 元素    —-定时器&lt;/li&gt;
+&lt;li&gt;3
+    
+    </summary>
+    
+      <category term="H5" scheme="http://yoursite.com/categories/H5/"/>
+    
+    
+      <category term="H5新特性" scheme="http://yoursite.com/tags/H5%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>web前端开发工程师技能树</title>
+    <link href="http://yoursite.com/2016/02/20/web%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E6%A0%91/"/>
+    <id>http://yoursite.com/2016/02/20/web前端技能树/</id>
+    <published>2016-02-20T09:05:17.000Z</published>
+    <updated>2017-07-06T09:33:14.605Z</updated>
+    
+    <content type="html"><![CDATA[<p>有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:<br><br><a id="more"></a></p>
+<ul>
+<li>1.必须掌握HTML5的新特性 + CSS3的动画 + 原生JavaScript的用法</li>
+<li>2.要掌握web开发的一些框架如 React Angular Vue Awalon Backbone ,类库如 Lodash Underscope jQuery Zepto Prototype, 插件如 iScroll jqGrid Owl.Carousel 可视化插件HighChart eChart</li>
+<li>3.要会移动应用开发 React-Native  Phonegap  Sencha Touch   H5Builder</li>
+<li>4.要会响应式布局和微信应用的开发</li>
+<li>5.能解决css,js跨浏览器的兼容性问题，了解常见的引起内存泄露的原因及解决方法</li>
+<li>6.要懂得网页优化 CSS优化和JavaScript优化方法  SEO优化方法和分析工具</li>
+<li>7.要熟悉http协议 网络安全-跨站脚本攻击(Cross-site scripting) /跨站请求伪造(Cross Site Request Forgery)/ 中间人劫持的防御方法</li>
+<li>8.要掌握web服务器端的开发语言Java/PHP/Python/Ruby/.Net中的一种 和 数据库如MySQL/SQlite3</li>
+<li>9.要熟练应用开发工具 如Sublime-Text3/WebStrom node+express/node+koa/node+hapi  gulp/grunt bower  PhotoShop SVG编辑器 , 各种浏览器的自带调试功能 和性能优化工具YSlow/PageSpeed<br> 在线工具如JsFiddle/CodePen/RunJS /CodeCademy</li>
+<li>10.会开发自定义插件,能够进行框架选择 架构和接口设计  制定编程规范</li>
+<li>11.了解UI的设计模式和方法，有敏锐的用户体验意识。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web技能" scheme="http://yoursite.com/categories/web%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="技能" scheme="http://yoursite.com/tags/%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   

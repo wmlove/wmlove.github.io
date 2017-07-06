@@ -469,29 +469,46 @@ tags: #文章標籤 可以省略
 
 
   
-    <article id="post-web前端技能树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vue-目录结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/20/web前端技能树/">web前端开发工程师技能树</a>
+      <a class="article-title" href="/2016/03/16/vue-目录结构/">vue项目中目录结构</a>
     </h1>
   
 
         
-        <a href="/2016/02/20/web前端技能树/" class="archive-article-date">
-  	<time datetime="2016-02-20T09:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-20</time>
+        <a href="/2016/03/16/vue-目录结构/" class="archive-article-date">
+  	<time datetime="2016-03-16T05:58:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:<br><br>
+        <h3 id="一-简单的目录结构"><a href="#一-简单的目录结构" class="headerlink" title="一.简单的目录结构"></a>一.简单的目录结构</h3><ul>
+<li>index.html  </li>
+<li>main.js — 入口文件</li>
+<li>App.vue — vue文件,官方推荐命名法 : 首字母大写<ul>
+<li>.vue文件:  放置的是vue组件代码<ul>
+<li>html部分 用template标签</li>
+<li>css部分  用style标签</li>
+<li>js 部分  用script标签</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>package.json —工程文件(项目依赖/名称/配置)<ul>
+<li>npm init –yes生成</li>
+</ul>
+</li>
+<li>webpack.config.js — webpack配置文件</li>
+</ul>
         
-          <a class="article-more-a" href="/2016/02/20/web前端技能树/#more">more >></a>
+          <a class="article-more-a" href="/2016/03/16/vue-目录结构/#more">more >></a>
         
       
 
@@ -505,7 +522,11 @@ tags: #文章標籤 可以省略
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技能</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
         		</li>
       		
 		</ul>
@@ -517,7 +538,7 @@ tags: #文章標籤 可以省略
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/web技能/" class="article-tag-list-link color1">web技能</a>
+        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
         		</li>
       		
 		</ul>
@@ -526,7 +547,7 @@ tags: #文章標籤 可以省略
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/20/web前端技能树/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/03/16/vue-目录结构/">展开全文 >></a>
         </p>
       
 
@@ -634,6 +655,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
               </li>
              
               <li class="article-tag-list-item">
