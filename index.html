@@ -156,6 +156,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-前端PC兼容问题总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/前端PC兼容问题总结/">前端PC兼容问题总结</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/19/前端PC兼容问题总结/" class="archive-article-date">
+  	<time datetime="2017-06-19T13:28:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>1.如果图片加a标签在IE9-中会有边框 </p>
+<p>  解决方案：<br></p>
+<pre><code>img{border:none;}
+</code></pre></li>
+<li><p>2.rgba不支持IE8</p>
+<p>  解决方案：可以用 opacity</p>
+<pre><code>eg: 
+opacity:0.7;/*FF chrome safari opera*/
+filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
+</code></pre><p>  但是,需要注意的是,opacity会影响里面元素的透明度</p>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/06/19/前端PC兼容问题总结/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兼容</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/兼容问题/" class="article-tag-list-link color5">兼容问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/19/前端PC兼容问题总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-如何在标题栏的title前添加网站logo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -455,92 +539,9 @@ http://vuejs.org/
 
 
   
-    <article id="post-vue-router" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/16/vue-router/">vue-router使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/16/vue-router/" class="archive-article-date">
-  	<time datetime="2017-04-16T12:40:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
-</code></pre><ul>
-<li><p>路由:<br>  vue-router</p>
-<pre><code>-&gt;  如何查看版本:
-    bower info vue-router
-</code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/16/vue-router/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/16/vue-router/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -647,6 +648,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
               </li>
             
             <div class="clearfix"></div>
