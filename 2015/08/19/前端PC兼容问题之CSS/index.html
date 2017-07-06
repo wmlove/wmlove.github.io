@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>前端工程师技能树 | Hexo-wmの博客</title>
+  <title>前端PC兼容问题之CSS | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="语言基础 JavaScript：  作用域链、闭包、运行时上下文、this  原型链、继承  NodeJS基础和常用API">
-<meta name="keywords" content="web技能">
+  <meta name="description" content="1.如果图片加a标签在IE9-中会有边框    解决方案： img{border:none;}  2.rgba不支持IE8   解决方案：可以用 opacity eg:  opacity:0.7;/*FF chrome safari opera*/ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/   但是,需要注意的是,opacity会影响里面元素的透明度">
+<meta name="keywords" content="兼容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工程师技能树">
-<meta property="og:url" content="http://yoursite.com/2015/07/06/前端工程师技能树/index.html">
+<meta property="og:title" content="前端PC兼容问题之CSS">
+<meta property="og:url" content="http://yoursite.com/2015/08/19/前端PC兼容问题之CSS/index.html">
 <meta property="og:site_name" content="Hexo-wmの博客">
-<meta property="og:description" content="语言基础 JavaScript：  作用域链、闭包、运行时上下文、this  原型链、继承  NodeJS基础和常用API">
-<meta property="og:updated_time" content="2017-07-06T13:19:26.499Z">
+<meta property="og:description" content="1.如果图片加a标签在IE9-中会有边框    解决方案： img{border:none;}  2.rgba不支持IE8   解决方案：可以用 opacity eg:  opacity:0.7;/*FF chrome safari opera*/ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/   但是,需要注意的是,opacity会影响里面元素的透明度">
+<meta property="og:updated_time" content="2017-07-06T13:59:51.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端工程师技能树">
-<meta name="twitter:description" content="语言基础 JavaScript：  作用域链、闭包、运行时上下文、this  原型链、继承  NodeJS基础和常用API">
+<meta name="twitter:title" content="前端PC兼容问题之CSS">
+<meta name="twitter:description" content="1.如果图片加a标签在IE9-中会有边框    解决方案： img{border:none;}  2.rgba不支持IE8   解决方案：可以用 opacity eg:  opacity:0.7;/*FF chrome safari opera*/ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/   但是,需要注意的是,opacity会影响里面元素的透明度">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
@@ -156,88 +156,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-前端工程师技能树" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-前端PC兼容问题之CSS" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前端工程师技能树
+      前端PC兼容问题之CSS
     </h1>
   
 
         
-        <a href="/2015/07/06/前端工程师技能树/" class="archive-article-date">
-  	<time datetime="2015-07-06T12:56:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-06</time>
+        <a href="/2015/08/19/前端PC兼容问题之CSS/" class="archive-article-date">
+  	<time datetime="2015-08-19T13:28:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h4><ul>
-<li>JavaScript： <ul>
-<li>作用域链、闭包、运行时上下文、this </li>
-<li>原型链、继承 </li>
-<li>NodeJS基础和常用API<a id="more"></a></li>
-</ul>
-</li>
-<li>CSS： <ul>
-<li>选择器 </li>
-<li>浏览器兼容性及常见的hack处理 </li>
-<li>CSS布局的方式和原理（盒子模型、BFC、IFC等等） </li>
-<li>CSS 3，如animation、gradient、等等</li>
-</ul>
-</li>
-<li>HTML： <ul>
-<li>语义化标签</li>
-</ul>
+        <ul>
+<li><p>1.如果图片加a标签在IE9-中会有边框 </p>
+<p>  解决方案：<br></p>
+<pre><code>img{border:none;}
+</code></pre></li>
+<li><p>2.rgba不支持IE8</p>
+<p>  解决方案：可以用 opacity</p>
+<pre><code>eg: 
+opacity:0.7;/*FF chrome safari opera*/
+filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
+</code></pre><p>  但是,需要注意的是,opacity会影响里面元素的透明度</p>
 </li>
 </ul>
-<h4 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h4><h5 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript:"></a>JavaScript:</h5><ul>
-<li>异步控制（Promise、ES6 generator、Async） </li>
-<li>模块化的开发方式（AMD、CMD、KMD等等） </li>
-<li>JavaScript解释器的一些相关知识 </li>
-<li>异步IO实现 </li>
-<li>垃圾回收 </li>
-<li>事件队列 </li>
-<li>常用框架使用及其原理</li>
-</ul>
-<h5 id="js库-框架"><a href="#js库-框架" class="headerlink" title="js库/框架"></a>js库/框架</h5><ul>
-<li>jQuery：基于选择器的框架，但个人认为不能叫框架，应该算工具库，因为不具备模块加载机制，其中源码很适合阅读钻研 </li>
-<li>AngularJS/Avalon等MVVM框架：着重理解MVVM模式本身的理念和双向绑定的实现，如何解耦 </li>
-<li>underscore：优秀的工具库，方便的理解常用工具代码片段的实现 </li>
-<li>polymer/React: 组件化开发，面向未来，理解组件化开发的原理 </li>
-<li>CSS和HTML：主要是CSS3的特性和HTML5的特性，以及浏览器处理的流程和绘制原理</li>
-<li>DOM树、CSSOM树、渲染树的构建流程及页面渲染的过程 </li>
-<li>解析HTML、CSS、JavaScript时造成的阻塞 </li>
-<li>HTML5相关 </li>
-<li>SVG及矢量图原理 </li>
-<li>Canvas开发及动画原理（帧动画） </li>
-<li>Video和Audio </li>
-<li>flex box布局方式 </li>
-<li>icon fonts的使用</li>
-</ul>
-<h4 id="一些理念："><a href="#一些理念：" class="headerlink" title="一些理念："></a>一些理念：</h4><ul>
-<li>响应式Web </li>
-<li>优雅降级、渐进增强 </li>
-<li>don`t make me think </li>
-<li>网页可用性、可访问性、其中的意义 </li>
-<li>SEO搜索引擎优化，了解搜索引擎的原理 </li>
-<li>SPA的好处和问题</li>
-</ul>
-<h4 id="性能优化："><a href="#性能优化：" class="headerlink" title="性能优化："></a>性能优化：</h4><ul>
-<li>减少请求数量（sprite、combo） </li>
-<li>善用缓存（application cache、http缓存、CDN、localstorage、sessionstorage，备忘录模式） </li>
-<li>减少选择器消耗（从右到左），减少DOM操作（DOM和JavaScript解释器的分离） </li>
-<li>CSS的回流与重绘</li>
-</ul>
-<p>总结：<br><br>    有些东西不是考敲码就能弄好的，我参与实习的时候感受到了很多，这些是我遇到的也是我感觉自己做的不好的地方<br></p>
+<a id="more"></a>
 <ul>
-<li>交流和沟通能力：<br>  这个非常重要，前端同时需要与项目经理、产品、交互、后台打交道，沟通不善会导致很多无用功，延缓项目 <br></li>
-<li>知识管理、时间管理：<br>  input和output的平衡，output是最好的input。如何做好分享，参与社区，做好交流，作好记录 <br></li>
-<li>对新技术的渴望，以及敢于尝试</li>
+<li><p>3.display:inline-block ie6/7不支持</p>
+<p>  解决方案:<br></p>
+<pre><code>display:inline-block; 
+*display:inline;
+</code></pre></li>
+<li><p>4.默认的body没有body去掉margin情况下ie5、6、7边缘会很宽margin-top加倍  如果处于无声明状态那么所有的ie浏览器margin-top加倍</p>
+<p>  解决方案:<br></p>
+<pre><code>用css给body添加magin属性为0px 
+body{margin:0;}
+</code></pre></li>
+<li><p>5.IE 6.0 Firefox Opera等是 真实宽度=width+padding+border    IE5.X 真实宽度=width</p>
+<p>  解决方案：<br></p>
+<p> 方法1：</p>
+<pre><code>div.content {
+    width:400px;  //这个是错误的width(对于ie5来说是正确的），所有浏览器都读到了 
+    voice-family: &quot;\&quot;}\&quot;&quot;;  //IE5.X/win忽略了&quot;\&quot;}\&quot;&quot;后的内容` 
+    voice-family:inherit; 
+    width:300px;  //包括IE6/win在内的部分浏览器读到这句，新的数值(300px)覆盖掉了旧的 
+}　
+</code></pre><p> 方法2：</p>
+<pre><code>div.content {
+    width:300px !important;  //这个是正确的width，大部分支持!important标记的浏览器使用这里的数值 
+    width(空格)/**/:400px;  //IE6/win不解析这句，所以IE6/win仍然认为width的值是300px；而IE5.X/win读到这句，新的数值(400px)覆盖掉了旧的，因为!important标记对他们不起作用 
+}
+</code></pre></li>
+<li><p>6.height不能小于16px,设置较小高度标签（一般小于10px），在IE6，IE7，遨游中高度超出自己设置高度</p>
+</li>
+</ul>
+<p>　　解决方案:overflow设置为hidden</p>
+<ul>
+<li><p>7.min-height不兼容  ie6 7解释为超过高度就撑开，而其他版本浏览器则遮盖下面的层</p>
+<p>  解决方案:</p>
+<pre><code>min-height:200px;
+height:auto !important; 
+height:200px; 
+overflow:visible;
+</code></pre></li>
+<li><p>8.position:fixed  IE5、6无法识别此属性</p>
+</li>
+</ul>
+<p>　　解决方案:</p>
+<pre><code>&lt;!--[if lte IE 6]&gt;    
+    &lt;style type=&quot;text/css&quot;&gt;
+        html {
+            /*这个可以让IE6下滚动时无抖动*/
+            background: url(about:black) no-repeat fixed
+        }
+        #demo_t, #demo_b, #demo_l, #demo_r {
+    　        position: absolute;
+        }
+        #demo_t, #demo_b {
+　        /*这个解决body有padding时，IE6下100%不能铺满的问题*/
+　            width: expression(offsetParent.clientWidth);
+        }
+
+        /*下面三组规则用于IE6下top计算*/
+　        #demo_l, #demo_r {
+　　            top: expression(offsetParent.scrollTop + 300);
+        }
+　        #demo_t {
+　　　        top: expression(offsetParent.scrollTop);
+        }
+　        #demo_b {
+　　　　        top: expression(offsetParent.scrollTop + offsetParent.clientHeight-offsetHeight);
+　        }
+    &lt;/style&gt;
+&lt;![endif]--&gt;
+</code></pre><ul>
+<li>9.浮动的div有margin_left属性ie6会加倍  无论兼容视图还是无声明视图 </li>
+</ul>
+<p>　　解决方案:<br><br>　　　　方案一: IE6唯一识别属性_的方式加_display属性</p>
+<pre><code>_display:inline;
+</code></pre><p>　　　　方案二:</p>
+<pre><code>条件注释
+&lt;!--[if lte IE 6]&gt;
+    &lt;style&gt;
+        .on{ display:inline }
+    &lt;/style&gt;
+&lt;![endif]--&gt;
+</code></pre><ul>
+<li>10.cursor兼容  自定义指针cur格式的图片url路径问题无论是兼容还是无声明版本</li>
+</ul>
+<p>　　解决方案:<br></p>
+<pre><code>cursor:url(Hand.cur), url(/Hand.cur), auto;
+</code></pre><ul>
+<li>11.png图片  IE6里面的png图片不能透明 兼容版本和无声明版本都是 </li>
+</ul>
+<p>　　解决方案:<br></p>
+<pre><code>&lt;!--[if IE ]&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #DIVname{
+　            background:none;
+　　　　　　    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=&quot;pngtouming.png&quot;
+        }
+
+    &lt;/style&gt;
+&lt;![endif]--&gt;
+</code></pre><ul>
+<li>12.img浮动  img标签打回车会造成每个图片之间有缝隙</li>
+</ul>
+<p>　　解决方案: 可以删除之间的回车键也可以让这些图片浮动</p>
+<ul>
+<li><p>13.在IE浏览器下 input type=”text”文本框点击时后面会出现”X”,以及type=”password”后面会出现眼睛,如何除去这两种默认样式:</p>
+<pre><code>::-ms-clear,::-ms-reveal{display:none;}
+</code></pre><p>　     注:IE9-不识别</p>
+</li>
+<li><p>14.CSS3前缀 </p>
+<pre><code>-webkit-  webkit渲染引擎  chrome/safari &lt;br&gt;
+-moz-   gecko渲染引擎   firefox &lt;br&gt;
+-ms-    trident渲染引擎  IE &lt;br&gt;
+-o-  　opeck渲染引擎　opera　&lt;br&gt;　
+</code></pre><p>  动画、过渡、background-size 都需要加前缀</p>
+<p>  eg:动画 <br></p>
+<pre><code> @-webkit-keyframes name{
+     0%{动画开始的css样式;}
+     100%{动画结束的css样式;}
+ }
+ -webkit-animation:name 8s infinite linear;
+
+过渡：&lt;br&gt;
+
+ div.box{
+     bottom:-40px;　  　
+     -webkit-transition:all .3s ease-in-out 0s;
+ }
+</code></pre><p> 注:但是过渡不兼容IE8-,可以用JS动画实现 <br><br> background-size 同样也不支持IE8,可以考虑用img</p>
+</li>
+<li><p>15.渐变</p>
+</li>
+</ul>
+<p>　　解决方案:</p>
+<pre><code>filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#35FEA1,endColorStr=#6E9DFF); /*IE 6 7 8*/
+    background: -ms-linear-gradient(top, #35FEA1,  #6E9DFF);/* IE 10 */
+    background:-moz-linear-gradient(top, #35FEA1,  #6E9DFF); /*火狐*/
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#35FEA1), to(#6E9DFF));/*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#35FEA1), to(#6E9DFF));/* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #35FEA1,  #6E9DFF);/*Safari5.1 Chrome 10+*/
+       background: -o-linear-gradient(top, #35FEA1,  #6E9DFF);/*Opera 11.10+*/
+</code></pre><ul>
+<li>16.PIE.htc 可以实现很多css3属性在IE下的兼容性 如:圆角、阴影、渐变</li>
+</ul>
+<p>(1) 圆角 border-radius</p>
+<pre><code>.signBtn{
+       height: 40px;
+    background-color:#08BCD2;
+       color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    behavior: url(css/PIE.htc);
+} 
+</code></pre><p>(2)阴影 box-shadow</p>
+<pre><code>.box{
+    width:200px; height:200px;
+    -webkit-box-shadow:1px 0 10px;
+    -moz-box-shadow:1px 0 10px;
+    box-shadow: 1px 0 10px;
+    background-color: #fff;
+    behavior: url(css/PIE.htc);/*IE边框阴影*/
+}
+</code></pre><p>(3)背景透明rgba</p>
+<pre><code>.box{
+    background-color:rgba(12, 154, 171, 0.29);
+    behavior: url(css/PIE.htc);
+    -pie-background:rgba(12, 154, 171, 0.29);
+}
+</code></pre><p>(4)渐变</p>
+<pre><code>.box{
+    width:200px;
+       height:400px;
+       background:-webkit-gradient(linear, 0 0, 0 bottom, from(#9F9), to(#393));
+       background:-moz-linear-gradient(#9F9, #393);
+       -pie-background:linear-gradient(#9F9, #393);
+       behavior:url(pie.htc);                
+}
+</code></pre><p>   注:PIE.htc文件路径相对是相对于css文件,并非html文件,以上例子是将PIE.htc文件放在与css样式文件同一个文件夹css内,而对应的html问价与css文件夹同级</p>
+<ul>
+<li><p>17.JS实现点击跳转到指定位置</p>
+<pre><code>$(&quot;.arraw-bt&quot;).click(function(){
+    var scroll_offset = $(&quot;#section&quot;).offset();
+     console.log(scroll_offset);
+
+    //如果只写body,只被chrome支持 Firefox和ie不支持
+    $(&quot;body,html&quot;).animate({
+         &quot;scrollTop&quot;:scroll_offset.top
+     },0);//此处0写上会一下跳转到指定位置,若不写会有过渡效果
+});
+</code></pre></li>
 </ul>
 
       
@@ -273,7 +414,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web技能</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兼容</a>
         		</li>
       		
 		</ul>
@@ -285,7 +426,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/技能/" class="article-tag-list-link color3">技能</a>
+        			<a href="/categories/兼容问题/" class="article-tag-list-link color5">兼容问题</a>
         		</li>
       		
 		</ul>
@@ -340,7 +481,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/07/06/前端工程师技能树/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/08/19/前端PC兼容问题之CSS/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,18 +495,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/05/16/mmarkdown基本语法/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/08/02/PC端浏览器适配/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          mmarkdown基本语法
+          PC端页面适配
         
       </div>
     </a>
   
   
-    <a href="/2015/07/06/实现浏览器内多个标签页之间的通信/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">实现浏览器内多个标签页之间的通信</div>
+    <a href="/2015/08/26/前端PC兼容问题之JS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端PC兼容问题之JS</div>
       <i class="icon-circle-right"></i>
     </a>
   

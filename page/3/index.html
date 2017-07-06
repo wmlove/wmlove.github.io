@@ -156,29 +156,36 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-web前端技能树新" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-前端PC兼容问题之JS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/20/web前端技能树新/">web前端开发工程师技能树</a>
+      <a class="article-title" href="/2015/08/26/前端PC兼容问题之JS/">前端PC兼容问题之JS</a>
     </h1>
   
 
         
-        <a href="/2016/02/20/web前端技能树新/" class="archive-article-date">
-  	<time datetime="2016-02-20T09:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-20</time>
+        <a href="/2015/08/26/前端PC兼容问题之JS/" class="archive-article-date">
+  	<time datetime="2015-08-26T14:00:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有人对Github上编程语言的使用做过统计排行，JavaScript真可以说是一枝独秀，很难想象20年前，这个语言只是浏览器中的装饰性语言，能做的事情也就是一点特效或者检查一下要提交给服务器的表单是否满足要求。今天的JavaScript已经是一个全栈语言，从客户端到服务器无所不在。谁再敢妄言前端是一个没有技术含量的岗位,前端需要学习的东西很多,而且也要学得比较深入,前端是一个技术革新最为活跃的领域，如果不能保持求知欲和进取心,很快就会落伍。别人都已经在项目中运用很熟练的新特性，你可能还没有听说过。以下是我个人觉得作为一个web前端工程师，需要具备和掌握的一些技能:<br><br>
+        <h4 id="为什么会有兼容问题？"><a href="#为什么会有兼容问题？" class="headerlink" title="为什么会有兼容问题？"></a>为什么会有兼容问题？</h4><p>由于市场上浏览器种类众多，而不同浏览器其内核亦不尽相同，所以各个浏览器对网页的解析就有一定出入，这也是导致浏览器兼容问题出现的主要原因，我们的网页需要在主流浏览器上正常运行，就需要做好浏览器兼容。</p>
+<ul>
+<li>使用Trident内核的浏览器：IE、Maxthon、TT；</li>
+<li>使用Gecko内核的浏览器：Netcape6及以上版本、FireFox；</li>
+<li>使用Presto内核的浏览器：Opera7及以上版本；</li>
+<li>使用Webkit内核的浏览器：Safari、Chrome。</li>
+</ul>
+<p>javascript兼容性问题<br>
         
-          <a class="article-more-a" href="/2016/02/20/web前端技能树新/#more">more >></a>
+          <a class="article-more-a" href="/2015/08/26/前端PC兼容问题之JS/#more">more >></a>
         
       
 
@@ -192,7 +199,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技能</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兼容</a>
         		</li>
       		
 		</ul>
@@ -204,7 +211,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/web技能/" class="article-tag-list-link color1">web技能</a>
+        			<a href="/categories/兼容问题/" class="article-tag-list-link color5">兼容问题</a>
         		</li>
       		
 		</ul>
@@ -213,7 +220,91 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/20/web前端技能树新/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/08/26/前端PC兼容问题之JS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-前端PC兼容问题之CSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/19/前端PC兼容问题之CSS/">前端PC兼容问题之CSS</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/19/前端PC兼容问题之CSS/" class="archive-article-date">
+  	<time datetime="2015-08-19T13:28:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>1.如果图片加a标签在IE9-中会有边框 </p>
+<p>  解决方案：<br></p>
+<pre><code>img{border:none;}
+</code></pre></li>
+<li><p>2.rgba不支持IE8</p>
+<p>  解决方案：可以用 opacity</p>
+<pre><code>eg: 
+opacity:0.7;/*FF chrome safari opera*/
+filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
+</code></pre><p>  但是,需要注意的是,opacity会影响里面元素的透明度</p>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2015/08/19/前端PC兼容问题之CSS/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兼容</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/兼容问题/" class="article-tag-list-link color5">兼容问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/19/前端PC兼容问题之CSS/">展开全文 >></a>
         </p>
       
 
@@ -436,82 +527,6 @@
 
 
   
-    <article id="post-前端工程师技能树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/前端工程师技能树/">前端工程师技能树</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/06/前端工程师技能树/" class="archive-article-date">
-  	<time datetime="2015-07-06T12:56:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h4><ul>
-<li>JavaScript： <ul>
-<li>作用域链、闭包、运行时上下文、this </li>
-<li>原型链、继承 </li>
-<li>NodeJS基础和常用API
-        
-          <a class="article-more-a" href="/2015/07/06/前端工程师技能树/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技能/" class="article-tag-list-link color3">技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/06/前端工程师技能树/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -608,11 +623,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,11 +659,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">logo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">logo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
             <div class="clearfix"></div>
