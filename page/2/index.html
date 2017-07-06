@@ -471,33 +471,30 @@
 
 
   
-    <article id="post-url渲染过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-闭包问题总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/16/url渲染过程/">url渲染过程</a>
+      <a class="article-title" href="/2015/11/01/闭包问题总结/">闭包问题总结</a>
     </h1>
   
 
         
-        <a href="/2015/10/16/url渲染过程/" class="archive-article-date">
-  	<time datetime="2015-10-16T14:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-16</time>
+        <a href="/2015/11/01/闭包问题总结/" class="archive-article-date">
+  	<time datetime="2015-11-01T14:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？</p>
-<p>（1）假设是简单的http请求（GET），IPV4，无代理。</p>
-<ul>
-<li>1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。</li>
-<li>2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程
+        <p>要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。</p>
+<p>javascript语言的特殊处就是函数内部可以读取全局变量。<br>
         
-          <a class="article-more-a" href="/2015/10/16/url渲染过程/#more">more >></a>
+          <a class="article-more-a" href="/2015/11/01/闭包问题总结/#more">more >></a>
         
       
 
@@ -511,7 +508,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
         		</li>
       		
 		</ul>
@@ -523,7 +520,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/浏览器渲染/" class="article-tag-list-link color1">浏览器渲染</a>
+        			<a href="/categories/闭包总结/" class="article-tag-list-link color5">闭包总结</a>
         		</li>
       		
 		</ul>
@@ -532,7 +529,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2015/10/16/url渲染过程/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/11/01/闭包问题总结/">展开全文 >></a>
         </p>
       
 
@@ -671,15 +668,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">兼容</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">web技能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">jsonp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,6 +689,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">logo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
               </li>
             
             <div class="clearfix"></div>

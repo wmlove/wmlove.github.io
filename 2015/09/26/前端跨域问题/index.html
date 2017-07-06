@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo-wmの博客</title>
+  <title>前端跨域问题 | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-wmの博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="js中几种实用的跨域方法原理详解 只要协议、域名、端口有任何一个不同，都被当作是不同的域  一、通过jsonp跨域 &amp;lt;script&amp;gt;     function dosomething(jsondata){     //处理获取的json数据 } &amp;lt;/script&amp;gt; &amp;lt;script src=”url?callback=”dosomething”&amp;gt;&amp;lt;/scri">
+<meta name="keywords" content="jsonp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端跨域问题">
+<meta property="og:url" content="http://yoursite.com/2015/09/26/前端跨域问题/index.html">
 <meta property="og:site_name" content="Hexo-wmの博客">
-<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:description" content="js中几种实用的跨域方法原理详解 只要协议、域名、端口有任何一个不同，都被当作是不同的域  一、通过jsonp跨域 &amp;lt;script&amp;gt;     function dosomething(jsondata){     //处理获取的json数据 } &amp;lt;/script&amp;gt; &amp;lt;script src=”url?callback=”dosomething”&amp;gt;&amp;lt;/scri">
+<meta property="og:updated_time" content="2017-07-06T14:42:26.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-wmの博客">
-<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+<meta name="twitter:title" content="前端跨域问题">
+<meta name="twitter:description" content="js中几种实用的跨域方法原理详解 只要协议、域名、端口有任何一个不同，都被当作是不同的域  一、通过jsonp跨域 &amp;lt;script&amp;gt;     function dosomething(jsondata){     //处理获取的json数据 } &amp;lt;/script&amp;gt; &amp;lt;script src=”url?callback=”dosomething”&amp;gt;&amp;lt;/scri">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
@@ -154,150 +156,221 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-前端跨域问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/16/mmarkdown基本语法/" class="archive-article-date">
-  	<time datetime="2015-05-16T12:39:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/16/mmarkdown基本语法/">mmarkdown基本语法</a>
+    <h1 class="article-title" itemprop="name">
+      前端跨域问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2015/09/26/前端跨域问题/" class="archive-article-date">
+  	<time datetime="2015-09-26T14:30:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>js中几种实用的跨域方法原理详解</p>
+<p>只要协议、域名、端口有任何一个不同，都被当作是不同的域</p>
+<ul>
+<li><p>一、通过jsonp跨域</p>
+<pre><code>&lt;script&gt;
+    function dosomething(jsondata){
+    //处理获取的json数据
+}
+&lt;/script&gt;
+&lt;script src=”url?callback=”dosomething”&gt;&lt;/script&gt;
+</code></pre>  <a id="more"></a>
+<p>  php代码</p>
+<pre><code>&lt;?php
+$callback = $_GET[‘callback’]; //得到回调函数名
+$data = array(‘a’,’b’,’c’);//要返回的数据
+echo $callback.’(‘json_encode($data).’)’;//输出
+?&gt;
+//输出： dosomething([‘a’,’b’,’c’])
+</code></pre></li>
+</ul>
+<p>原理：通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。所以jsonp是需要服务器端的页面进行相应的配合的。</p>
+<p>jquery实现跨域</p>
+<pre><code>&lt;script&gt;
+    $getJSON(“url?callback=?”,function(jsondata){
+    //处理获取json数据
+    })
+&lt;/script&gt;
+</code></pre><ul>
+<li><p>二、通过修改document.domain来跨子域</p>
+<p>  （修改document.domain的方法只适用于不同子域的框架间的交互）<br><br>  //在页面 <a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 中设置domain</p>
+<pre><code>&lt;iframe src=”http://example.com/b.html” id=”iframe” onload=”test()”&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    document.domain = “example.com” ;//设置成主域
+    function test(){
+        alert(document.getElementById(“iframe”).contentWindow;
+    }
+&lt;/script&gt;
+//在页面 http://example.com/b.html 中也设置document.domain
+&lt;script&gt;
+    document.domain = “example.com”;
+    //在iframe载入的这个页面也设置document.domain,使之与主页面的document.domain相同
+&lt;/script&gt;
+</code></pre></li>
+<li><p>三、使用window.name来进行跨域</p>
+</li>
+<li><p>四、使用HTML5中新引进的window.postMessage方法来跨域传送数据</p>
+<p>  window.postMessage(message,targetOrigin)  方法是html5新引进的特性<br>支持的浏览器IE8+、FireFox、Chrome、Opera等</p>
+</li>
+<li><p>五、使用flash、在服务器上设置代理页面等跨域方式</p>
+</li>
+</ul>
+<p>总结：以上是按照使用的频率来总结的，所有jsonp放到了最前面，不常用以及几乎不用的放到了最后</p>
+<p>业精于勤</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">jsonp</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/markdown教程/" class="article-tag-list-link color1">markdown教程</a>
+        			<a href="/categories/跨域问题/" class="article-tag-list-link color5">跨域问题</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/09/26/前端跨域问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/10/hexo-新建一篇文章并添加分类和标签/" class="archive-article-date">
-  	<time datetime="2015-05-10T15:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/10/hexo-新建一篇文章并添加分类和标签/">hexo 新建一篇文章并添加分类和标签</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo教程/" class="article-tag-list-link color2">Hexo教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+    <a href="/2015/09/10/ajax问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ajax问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/16/url渲染过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">url渲染过程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/01/hello-world/" class="archive-article-date">
-  	<time datetime="2015-04-01T02:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-01</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/01/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -321,8 +394,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

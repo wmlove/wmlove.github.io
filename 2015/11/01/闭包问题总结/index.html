@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo-wmの博客</title>
+  <title>闭包问题总结 | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-wmの博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。 javascript语言的特殊处就是函数内部可以读取全局变量。">
+<meta name="keywords" content="闭包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="闭包问题总结">
+<meta property="og:url" content="http://yoursite.com/2015/11/01/闭包问题总结/index.html">
 <meta property="og:site_name" content="Hexo-wmの博客">
-<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:description" content="要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。 javascript语言的特殊处就是函数内部可以读取全局变量。">
+<meta property="og:updated_time" content="2017-07-06T14:41:22.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-wmの博客">
-<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+<meta name="twitter:title" content="闭包问题总结">
+<meta name="twitter:description" content="要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。 javascript语言的特殊处就是函数内部可以读取全局变量。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
@@ -154,150 +156,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-闭包问题总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/16/mmarkdown基本语法/" class="archive-article-date">
-  	<time datetime="2015-05-16T12:39:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/16/mmarkdown基本语法/">mmarkdown基本语法</a>
+    <h1 class="article-title" itemprop="name">
+      闭包问题总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2015/11/01/闭包问题总结/" class="archive-article-date">
+  	<time datetime="2015-11-01T14:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。</p>
+<p>javascript语言的特殊处就是函数内部可以读取全局变量。<br><a id="more"></a></p>
+<ul>
+<li>1.如何从外部读取局部变量？<br><br>我们有时候需要得到函数内的局部变量，但是在正常情况下，这是不能读取到的，只有通过变通方法才能读取到。</li>
+<li>2.闭包的概念<br><br>各种专业文献上的“闭包closure”定义非常抽象，很难看懂。可以这样理解，闭包就是i能够读取其他函数内部变量的函数。<br><br>在javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成“定义在一个函数内部的函数”。所以本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</li>
+<li>3.闭包的用途<br><br>闭包可以读取函数内部的变量，可以让变量的值始终保持在内存中。</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/markdown教程/" class="article-tag-list-link color1">markdown教程</a>
+        			<a href="/categories/闭包总结/" class="article-tag-list-link color5">闭包总结</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/11/01/闭包问题总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/10/hexo-新建一篇文章并添加分类和标签/" class="archive-article-date">
-  	<time datetime="2015-05-10T15:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/10/hexo-新建一篇文章并添加分类和标签/">hexo 新建一篇文章并添加分类和标签</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo教程/" class="article-tag-list-link color2">Hexo教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+    <a href="/2015/10/16/url渲染过程/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          url渲染过程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/20/web前端技能树新/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">web前端开发工程师技能树</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/01/hello-world/" class="archive-article-date">
-  	<time datetime="2015-04-01T02:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-01</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/01/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -321,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

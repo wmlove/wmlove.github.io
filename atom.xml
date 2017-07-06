@@ -716,6 +716,36 @@ div:hover { width:300px; }
   </entry>
   
   <entry>
+    <title>闭包问题总结</title>
+    <link href="http://yoursite.com/2015/11/01/%E9%97%AD%E5%8C%85%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2015/11/01/闭包问题总结/</id>
+    <published>2015-11-01T14:38:50.000Z</published>
+    <updated>2017-07-06T14:41:22.525Z</updated>
+    
+    <content type="html"><![CDATA[<p>要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。</p>
+<p>javascript语言的特殊处就是函数内部可以读取全局变量。<br><a id="more"></a></p>
+<ul>
+<li>1.如何从外部读取局部变量？<br><br>我们有时候需要得到函数内的局部变量，但是在正常情况下，这是不能读取到的，只有通过变通方法才能读取到。</li>
+<li>2.闭包的概念<br><br>各种专业文献上的“闭包closure”定义非常抽象，很难看懂。可以这样理解，闭包就是i能够读取其他函数内部变量的函数。<br><br>在javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成“定义在一个函数内部的函数”。所以本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</li>
+<li>3.闭包的用途<br><br>闭包可以读取函数内部的变量，可以让变量的值始终保持在内存中。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;要理解闭包，首先理解javascript特殊的变量作用域，变量的作用于无非就是两种：全局变量，局部变量。&lt;/p&gt;
+&lt;p&gt;javascript语言的特殊处就是函数内部可以读取全局变量。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="闭包总结" scheme="http://yoursite.com/categories/%E9%97%AD%E5%8C%85%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="闭包" scheme="http://yoursite.com/tags/%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>url渲染过程</title>
     <link href="http://yoursite.com/2015/10/16/url%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B/"/>
     <id>http://yoursite.com/2015/10/16/url渲染过程/</id>
@@ -773,6 +803,91 @@ div:hover { width:300px; }
     
     
       <category term="浏览器" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端跨域问题</title>
+    <link href="http://yoursite.com/2015/09/26/%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2015/09/26/前端跨域问题/</id>
+    <published>2015-09-26T14:30:13.000Z</published>
+    <updated>2017-07-06T14:42:26.329Z</updated>
+    
+    <content type="html"><![CDATA[<p>js中几种实用的跨域方法原理详解</p>
+<p>只要协议、域名、端口有任何一个不同，都被当作是不同的域</p>
+<ul>
+<li><p>一、通过jsonp跨域</p>
+<pre><code>&lt;script&gt;
+    function dosomething(jsondata){
+    //处理获取的json数据
+}
+&lt;/script&gt;
+&lt;script src=”url?callback=”dosomething”&gt;&lt;/script&gt;
+</code></pre>  <a id="more"></a>
+<p>  php代码</p>
+<pre><code>&lt;?php
+$callback = $_GET[‘callback’]; //得到回调函数名
+$data = array(‘a’,’b’,’c’);//要返回的数据
+echo $callback.’(‘json_encode($data).’)’;//输出
+?&gt;
+//输出： dosomething([‘a’,’b’,’c’])
+</code></pre></li>
+</ul>
+<p>原理：通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。所以jsonp是需要服务器端的页面进行相应的配合的。</p>
+<p>jquery实现跨域</p>
+<pre><code>&lt;script&gt;
+    $getJSON(“url?callback=?”,function(jsondata){
+    //处理获取json数据
+    })
+&lt;/script&gt;
+</code></pre><ul>
+<li><p>二、通过修改document.domain来跨子域</p>
+<p>  （修改document.domain的方法只适用于不同子域的框架间的交互）<br><br>  //在页面 <a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 中设置domain</p>
+<pre><code>&lt;iframe src=”http://example.com/b.html” id=”iframe” onload=”test()”&gt;&lt;/iframe&gt;
+&lt;script&gt;
+    document.domain = “example.com” ;//设置成主域
+    function test(){
+        alert(document.getElementById(“iframe”).contentWindow;
+    }
+&lt;/script&gt;
+//在页面 http://example.com/b.html 中也设置document.domain
+&lt;script&gt;
+    document.domain = “example.com”;
+    //在iframe载入的这个页面也设置document.domain,使之与主页面的document.domain相同
+&lt;/script&gt;
+</code></pre></li>
+<li><p>三、使用window.name来进行跨域</p>
+</li>
+<li><p>四、使用HTML5中新引进的window.postMessage方法来跨域传送数据</p>
+<p>  window.postMessage(message,targetOrigin)  方法是html5新引进的特性<br>支持的浏览器IE8+、FireFox、Chrome、Opera等</p>
+</li>
+<li><p>五、使用flash、在服务器上设置代理页面等跨域方式</p>
+</li>
+</ul>
+<p>总结：以上是按照使用的频率来总结的，所有jsonp放到了最前面，不常用以及几乎不用的放到了最后</p>
+<p>业精于勤</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;js中几种实用的跨域方法原理详解&lt;/p&gt;
+&lt;p&gt;只要协议、域名、端口有任何一个不同，都被当作是不同的域&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一、通过jsonp跨域&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+    function dosomething(jsondata){
+    //处理获取的json数据
+}
+&amp;lt;/script&amp;gt;
+&amp;lt;script src=”url?callback=”dosomething”&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="跨域问题" scheme="http://yoursite.com/categories/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="jsonp" scheme="http://yoursite.com/tags/jsonp/"/>
     
   </entry>
   
@@ -1377,106 +1492,6 @@ setInterval(function(){
     
     
       <category term="web技能" scheme="http://yoursite.com/tags/web%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mmarkdown基本语法</title>
-    <link href="http://yoursite.com/2015/05/16/mmarkdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
-    <id>http://yoursite.com/2015/05/16/mmarkdown基本语法/</id>
-    <published>2015-05-16T12:39:46.000Z</published>
-    <updated>2017-07-06T12:52:24.328Z</updated>
-    
-    <content type="html"><![CDATA[<p>Markdown 11种基本语法</p>
-<p>现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。<br></p>
-<ul>
-<li>1.标题设置（让字体变大，和word的标题意思一样）<br>在Markdown当中设置标题，有两种方式：<br><br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br><br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p>2.块注释（blockquote）<br><br>通过在文字开头添加“&gt;”表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）</p>
-</li>
-<li><p>3.斜体<br><br>将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来</p>
-</li>
-<li><p>4.粗体<br><br>将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来</p>
-</li>
-<li><p>5.无序列表<br><br>在文字开头添加(<em>, +, and -)实现无序列表。但是要注意在(</em>, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）</p>
-</li>
-<li><p>6.有序列表<br><br>使用数字后面跟上句号。（还要有空格）</p>
-</li>
-<li><p>7.链接（Links）<br><br>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br>内联方式：This is an <a href="http://example.com/" target="_blank" rel="external">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.  </p>
-</li>
-</ul>
-<ul>
-<li>8.图片（Images）<br><br>图片的处理方式和链接的处理方式，非常的类似。<br>内联方式：<img src="/path/to/img.jpg" alt="alt text" title="Title"><br>引用方式：<br><img src="/path/to/img.jpg" alt="alt text" title="Title"> </li>
-</ul>
-<ul>
-<li><p>9.代码（HTML中所谓的Code）<br><br>实现方式有两种：<br><br>第一种：简单文字出现一个代码框。使用/<code>&lt;blockquote&gt;/</code>。（/<code>不是单引号而是左上角的ESC下面~中的/</code>）<br><br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
-</li>
-<li><p>10.脚注（footnote）<br><br>实现方式如下：<br>hello<a href="hi">^hello</a></p>
-</li>
-</ul>
-<ul>
-<li>11.下划线<br><br>在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Markdown 11种基本语法&lt;/p&gt;
-&lt;p&gt;现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。&lt;br&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1.标题设置（让字体变大，和word的标题意思一样）&lt;br&gt;在Markdown当中设置标题，有两种方式：&lt;br&gt;&lt;br&gt;第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。&lt;br&gt;&lt;br&gt;第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="markdown教程" scheme="http://yoursite.com/categories/markdown%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 新建一篇文章并添加分类和标签</title>
-    <link href="http://yoursite.com/2015/05/10/hexo-%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/"/>
-    <id>http://yoursite.com/2015/05/10/hexo-新建一篇文章并添加分类和标签/</id>
-    <published>2015-05-10T15:47:44.000Z</published>
-    <updated>2017-07-06T12:38:36.776Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p>新建一个hexo文章</p>
-<pre><code>hexo new &quot;Hexo教程&quot;
-</code></pre></li>
-<li><p>通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑</p>
-<pre><code>---    
-title: title #文章標題
-date: 2017-06-01 23:47:44 #文章生成時間
-categories: &quot;Hexo教程&quot; #文章分類目錄 可以省略
-tags: #文章標籤 可以省略
-     - 标签1
-      - 标签2
- description: #你對本頁的描述 可以省略
----
-</code></pre></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;新建一个hexo文章&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hexo new &amp;quot;Hexo教程&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑&lt;
-    
-    </summary>
-    
-      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
