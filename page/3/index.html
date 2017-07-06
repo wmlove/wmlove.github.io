@@ -156,6 +156,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ajax问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/10/ajax问题/">ajax问题</a>
+    </h1>
+  
+
+        
+        <a href="/2015/09/10/ajax问题/" class="archive-article-date">
+  	<time datetime="2015-09-10T14:12:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ajax原理和XmlHttpRequest对象</p>
+<p>Ajax的原理简单来说通过XmlHttpRequest对象来向服务器发异步请求，从服务器获得数据，然后用javascript来操作DOM而更新页面。这其中最关键的一步就是从服务器获得请求数据。要清楚这个过程和原理，我们必须对 XMLHttpRequest有所了解。<br>
+        
+          <a class="article-more-a" href="/2015/09/10/ajax问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ajax问题/" class="article-tag-list-link color2">ajax问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/09/10/ajax问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-前端PC兼容问题之JS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -392,32 +465,34 @@ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
 
 
   
-    <article id="post-多个css文件合并到一个css中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-如何在标题栏的title前添加网站logo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/16/多个css文件合并到一个css中/">多个css文件合并到一个css中</a>
+      <a class="article-title" href="/2015/07/25/如何在标题栏的title前添加网站logo/">如何在标题栏的title前添加网站logo</a>
     </h1>
   
 
         
-        <a href="/2015/07/16/多个css文件合并到一个css中/" class="archive-article-date">
-  	<time datetime="2015-07-16T13:28:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-16</time>
+        <a href="/2015/07/25/如何在标题栏的title前添加网站logo/" class="archive-article-date">
+  	<time datetime="2015-07-25T02:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="在HTML中引入css的其中的两个方法："><a href="#在HTML中引入css的其中的两个方法：" class="headerlink" title="在HTML中引入css的其中的两个方法："></a>在HTML中引入css的其中的两个方法：</h5><p>导入式和链接式的目的都是将一个独立的css文件引入一个文件中，二者的区别不大，事实上，二者最大的区别在于链接式使用html的标记引入外部css文件，而使用导入式则是使用css规则引入外部css文件。因此它们的语法也不同。<br><br>1.如果使用链接式，需要使用如下的语句引入外部css文件：</p>
-<pre><code>&lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;type=&quot;text/css&quot; /&gt;
-</code></pre>
-        
-          <a class="article-more-a" href="/2015/07/16/多个css文件合并到一个css中/#more">more >></a>
-        
+        <ul>
+<li>1.将像素大小为16*16的图片命名为 favicon.ico,(图片使用的颜色好像不能超过16色),放到网站根目录下就可以了;</li>
+<li><p>2.在head标签中添加代码(这种方法图标可以随意命名,也可以不放在根目录下):</p>
+<pre><code>标题栏: &lt;link rel=&quot;icon&quot; href=&quot;ico地址&quot; type=&quot;image/x-icon&quot;/&gt;
+收藏夹: &lt;link rel=&quot;shortcut icon&quot; href=&quot;ico地址&quot; type=&quot;image/x-icon&quot;/&gt;
+</code></pre></li>
+</ul>
+
       
 
       
@@ -430,89 +505,17 @@ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">logo</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/css合并/" class="article-tag-list-link color1">css合并</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/16/多个css文件合并到一个css中/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-实现浏览器内多个标签页之间的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/06/实现浏览器内多个标签页之间的通信/">实现浏览器内多个标签页之间的通信</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/06/实现浏览器内多个标签页之间的通信/" class="archive-article-date">
-  	<time datetime="2015-07-06T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。<br>
-        
-          <a class="article-more-a" href="/2015/07/06/实现浏览器内多个标签页之间的通信/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/浏览器通信/" class="article-tag-list-link color1">浏览器通信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/06/实现浏览器内多个标签页之间的通信/">展开全文 >></a>
+          <a class="article-more-a" href="/2015/07/25/如何在标题栏的title前添加网站logo/">展开全文 >></a>
         </p>
       
 
@@ -529,7 +532,7 @@ filter:alpha(opacity:70);/*用了ie滤镜,可以兼容ie*/
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -623,6 +626,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -659,11 +666,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">logo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">logo</a>
               </li>
             
             <div class="clearfix"></div>

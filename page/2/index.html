@@ -156,79 +156,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-搭建一个vue实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/02/搭建一个vue实例/">第一个vue-jd项目</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/02/搭建一个vue实例/" class="archive-article-date">
-  	<time datetime="2017-04-02T08:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-在github上创建一个项目例如-vue-jd"><a href="#1-在github上创建一个项目例如-vue-jd" class="headerlink" title="1. 在github上创建一个项目例如:vue-jd"></a>1. 在github上创建一个项目例如:vue-jd</h1><ul>
-<li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git">https://github.com/wmlove/vue-jd.git</a><h1 id="2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行"><a href="#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行" class="headerlink" title="2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行"></a>2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</h1>
-        
-          <a class="article-more-a" href="/2017/04/02/搭建一个vue实例/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/02/搭建一个vue实例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-使用node.js实现网站在线聊天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -544,9 +471,113 @@
 
 
   
+    <article id="post-url渲染过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/16/url渲染过程/">url渲染过程</a>
+    </h1>
+  
+
+        
+        <a href="/2015/10/16/url渲染过程/" class="archive-article-date">
+  	<time datetime="2015-10-16T14:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？</p>
+<p>（1）假设是简单的http请求（GET），IPV4，无代理。</p>
+<ul>
+<li>1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。</li>
+<li>2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程</li>
+<li>3)浏览器从url中解析出端口号，默认80</li>
+<li>4)浏览器建立一条与服务器的tcp连接（建立过程：三次握手）。<br>PS：一个完整的TCP连接</li>
+<li>5)浏览器通过tcp连接向服务器发送http请求，请求数据包。</li>
+<li>6)服务器处理HTTP请求，返回响应。</li>
+<li>7)浏览器检查HTTP响应是否为一个重定向（3XX结果状态码）、一个验证请求（401）、错误（4XX、5XX）等等，这些都需要根据具体情况分类处理。PS：浏览器对于常见HTTP状态码的反应</li>
+<li>8)浏览器接收HTTP响应并且可能关掉TCP连接，或者是重新建立连接使用新情求，获得新响应。</li>
+<li>9)浏览器解码响应，如果响应可以缓存，则存入缓存。</li>
+<li>10)浏览器显示HTML页面。</li>
+<li>11)浏览器发送请求获取嵌入在HTML中的资源（html，css，javascript，图片，音乐······），对于未知类型，会弹出对话框。</li>
+<li>12)浏览器发送异步请求。</li>
+<li>13)页面全部渲染结束。</li>
+</ul>
+<p>简要总结：</p>
+<ul>
+<li>DNS解析</li>
+<li>TCP连接</li>
+<li>发送HTTP请求</li>
+<li>服务器处理请求并返回HTTP报文</li>
+<li>浏览器解析渲染页面</li>
+<li>连接结束</li>
+</ul>
+<p>解析渲染该过程主要分为以下步骤：</p>
+<ul>
+<li>解析HTML</li>
+<li>构建DOM树</li>
+<li>DOM树与CSS样式进行附着构造呈现树</li>
+<li>布局</li>
+<li>绘制</li>
+</ul>
+<p>总结不全，敬请谅解！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/浏览器渲染/" class="article-tag-list-link color1">浏览器渲染</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/10/16/url渲染过程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -640,6 +671,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -676,11 +711,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">logo</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">logo</a>
               </li>
             
             <div class="clearfix"></div>

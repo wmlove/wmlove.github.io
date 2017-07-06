@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/10/16/url%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B/</loc>
+    
+    <lastmod>2017-07-06T14:24:30.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/09/10/ajax%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2017-07-06T14:19:35.664Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/07/25/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%A0%87%E9%A2%98%E6%A0%8F%E7%9A%84title%E5%89%8D%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99logo/</loc>
+    
+    <lastmod>2017-07-06T14:10:25.235Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/08/26/%E5%89%8D%E7%AB%AFPC%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%E4%B9%8BJS/</loc>
     
     <lastmod>2017-07-06T14:07:19.457Z</lastmod>
@@ -82,13 +103,6 @@
     <loc>http://yoursite.com/2015/04/01/hello-world/</loc>
     
     <lastmod>2017-07-06T09:02:26.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/06/05/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%A0%87%E9%A2%98%E6%A0%8F%E7%9A%84title%E5%89%8D%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99logo/</loc>
-    
-    <lastmod>2017-07-06T08:40:38.828Z</lastmod>
     
   </url>
   
