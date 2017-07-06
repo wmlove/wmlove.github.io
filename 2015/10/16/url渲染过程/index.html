@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>url渲染过程 | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程 3)浏览器从url中解析出端口号，默认">
+  <meta name="description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程">
 <meta name="keywords" content="浏览器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="url渲染过程">
 <meta property="og:url" content="http://yoursite.com/2015/10/16/url渲染过程/index.html">
 <meta property="og:site_name" content="Hexo-wmの博客">
-<meta property="og:description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程 3)浏览器从url中解析出端口号，默认">
-<meta property="og:updated_time" content="2017-07-06T14:24:30.205Z">
+<meta property="og:description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程">
+<meta property="og:updated_time" content="2017-07-06T14:25:36.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="url渲染过程">
-<meta name="twitter:description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程 3)浏览器从url中解析出端口号，默认">
+<meta name="twitter:description" content="一个url输入浏览器到页面渲染出来，这个过程都发生了哪些事情？ （1）假设是简单的http请求（GET），IPV4，无代理。  1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。 2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
@@ -180,7 +180,7 @@
 <p>（1）假设是简单的http请求（GET），IPV4，无代理。</p>
 <ul>
 <li>1)浏览器先查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，请略过中间步骤，直接跳到第9步~若没有，则按照下面的步骤进行操作。</li>
-<li>2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程</li>
+<li>2)浏览器从url中解析出服务器的主机名，并将主机名转换成服务器的IP地址。PS：DNS查找域名的过程<a id="more"></a></li>
 <li>3)浏览器从url中解析出端口号，默认80</li>
 <li>4)浏览器建立一条与服务器的tcp连接（建立过程：三次握手）。<br>PS：一个完整的TCP连接</li>
 <li>5)浏览器通过tcp连接向服务器发送http请求，请求数据包。</li>
