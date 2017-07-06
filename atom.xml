@@ -738,48 +738,6 @@ subRoutes:{//子路由
   </entry>
   
   <entry>
-    <title>hexo 新建一篇文章并添加分类和标签</title>
-    <link href="http://yoursite.com/2017/02/01/hexo-%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/"/>
-    <id>http://yoursite.com/2017/02/01/hexo-新建一篇文章并添加分类和标签/</id>
-    <published>2017-02-01T15:47:44.000Z</published>
-    <updated>2017-07-06T08:21:53.775Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li><p>新建一个hexo文章</p>
-<pre><code>hexo new &quot;Hexo教程&quot;
-</code></pre></li>
-<li><p>通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑</p>
-<pre><code>---    
-title: title #文章標題
-date: 2017-06-01 23:47:44 #文章生成時間
-categories: &quot;Hexo教程&quot; #文章分類目錄 可以省略
-tags: #文章標籤 可以省略
-     - 标签1
-      - 标签2
- description: #你對本頁的描述 可以省略
----
-</code></pre></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;新建一个hexo文章&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;hexo new &amp;quot;Hexo教程&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑&lt;
-    
-    </summary>
-    
-      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue项目中目录结构</title>
     <link href="http://yoursite.com/2016/03/16/vue-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/"/>
     <id>http://yoursite.com/2016/03/16/vue-目录结构/</id>
@@ -1017,6 +975,103 @@ div:hover { width:300px; }
     
     
       <category term="技能" scheme="http://yoursite.com/tags/%E6%8A%80%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mmarkdown基本语法</title>
+    <link href="http://yoursite.com/2015/05/16/mmarkdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    <id>http://yoursite.com/2015/05/16/mmarkdown基本语法/</id>
+    <published>2015-05-16T12:39:46.000Z</published>
+    <updated>2017-07-06T12:48:33.707Z</updated>
+    
+    <content type="html"><![CDATA[<p>Markdown 11种基本语法</p>
+<p>现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。<br></p>
+<ol>
+<li><p>标题设置（让字体变大，和word的标题意思一样）<br>在Markdown当中设置标题，有两种方式：<br><br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br><br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</p>
+</li>
+<li><p>块注释（blockquote）<br><br>通过在文字开头添加“&gt;”表示块注释。（当&gt;和文字之间添加五个blank时，块注释的文字会有变化。）</p>
+</li>
+<li><p>斜体<br><br>将需要设置为斜体的文字两端使用1个“*”或者“_”夹起来</p>
+</li>
+<li><p>粗体<br><br>将需要设置为斜体的文字两端使用2个“*”或者“_”夹起来</p>
+</li>
+<li><p>无序列表<br><br>在文字开头添加(<em>, +, and -)实现无序列表。但是要注意在(</em>, +, and -)和文字之间需要添加空格。（建议：一个文档中只是用一种无序列表的表示方式）</p>
+</li>
+<li><p>有序列表<br><br>使用数字后面跟上句号。（还要有空格）</p>
+</li>
+<li><p>链接（Links）<br><br>Markdown中有两种方式，实现链接，分别为内联方式和引用方式。<br>内联方式：This is an <a href="http://example.com/" target="_blank" rel="external">example link</a>.<br>引用方式：<br>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.  </p>
+</li>
+</ol>
+<ol>
+<li>图片（Images）<br><br>图片的处理方式和链接的处理方式，非常的类似。<br>内联方式：<img src="/path/to/img.jpg" alt="alt text" title="Title"><br>引用方式：<br><img src="/path/to/img.jpg" alt="alt text" title="Title"> </li>
+</ol>
+<ol>
+<li><p>代码（HTML中所谓的Code）<br><br>实现方式有两种：<br><br>第一种：简单文字出现一个代码框。使用/<code>&lt;blockquote&gt;/</code>。（/<code>不是单引号而是左上角的ESC下面~中的/</code>）<br><br>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
+</li>
+<li><p>脚注（footnote）<br><br>实现方式如下：<br>hello<a href="hi">^hello</a></p>
+</li>
+</ol>
+<ol>
+<li>下划线<br><br>在空白行下方添加三条“-”横线。（前面讲过在文字下方添加“-”，实现的2级标题）</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Markdown 11种基本语法&lt;/p&gt;
+&lt;p&gt;现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;标题设置（让字体变大，和word的标题意思一样）&lt;br&gt;在Markdown当中设置标题，有两种
+    
+    </summary>
+    
+      <category term="markdown教程" scheme="http://yoursite.com/categories/markdown%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 新建一篇文章并添加分类和标签</title>
+    <link href="http://yoursite.com/2015/05/10/hexo-%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/"/>
+    <id>http://yoursite.com/2015/05/10/hexo-新建一篇文章并添加分类和标签/</id>
+    <published>2015-05-10T15:47:44.000Z</published>
+    <updated>2017-07-06T12:38:36.776Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p>新建一个hexo文章</p>
+<pre><code>hexo new &quot;Hexo教程&quot;
+</code></pre></li>
+<li><p>通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑</p>
+<pre><code>---    
+title: title #文章標題
+date: 2017-06-01 23:47:44 #文章生成時間
+categories: &quot;Hexo教程&quot; #文章分類目錄 可以省略
+tags: #文章標籤 可以省略
+     - 标签1
+      - 标签2
+ description: #你對本頁的描述 可以省略
+---
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;新建一个hexo文章&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hexo new &amp;quot;Hexo教程&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过mou编辑器打开：添加tags和categories 或 直接打开markdown打开编辑&lt;
+    
+    </summary>
+    
+      <category term="Hexo教程" scheme="http://yoursite.com/categories/Hexo%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
