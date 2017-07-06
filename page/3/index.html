@@ -156,174 +156,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-html5-css3新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/06/html5-css3新特性/">html5+css3新特性</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/06/html5-css3新特性/" class="archive-article-date">
-  	<time datetime="2016-03-06T09:36:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>1.HTML5的新特性 <!-- 语义化标签，canvas，音频视频，表单元素，API接口 --><ul>
-<li>1)用于绘画的 canvas 元素</li>
-<li>2)用于媒介回放的 video 和 audio 元素    —-定时器</li>
-<li>3)对本地离线存储的更好的支持(localStorage, sessionStorage)</li>
-<li>4)新的特殊内容元素，比如 article、footer、header、nav、section</li>
-<li>5)新的表单控件，比如 calendar、date、time、email、url、search</li>
-</ul>
-</li>
-<li><p>2.CSS3的特效 / 动画</p>
-<ul>
-<li>1.CSS3 选择器（Selector）</li>
-<li>2.@Font-face 特性<br><ul>
-<li>加载字体样式,也能加载服务器端的字体文件,让客户端显示没有安装的文字</li>
-<li>@font-face { font-family: BorderWeb;  src:url(BORDERW0.eot); }</li>
-</ul>
-</li>
-<li>3.Word-wrap &amp; Text-overflow 样式<ul>
-<li>Word-wrap : break-word; 允许长单词换行到下一行（默认值normal）</li>
-<li>text-overflow : clip|ellipsis|string; 规定当文本溢出包含元素时显示情况</li>
-</ul>
-</li>
-<li>4.文字渲染（Text-decoration）<ul>
-<li>Text-fill-color: 文字内部填充颜色</li>
-<li>Text-stroke-color: 文字边界填充颜色</li>
-<li>Text-stroke-width: 文字边界宽度</li>
-</ul>
-</li>
-<li>5.CSS3 的多列布局（multi-column layout）<ul>
-<li>Column-count：表示布局几列。</li>
-<li>Column-rule：表示列与列之间的间隔条的样式。</li>
-<li>Column-gap：表示列于列之间的间隔。</li>
-</ul>
-</li>
-<li>6.边框和颜色（color, border）<ul>
-<li>提供颜色透明度支持（rgba中a指透明度）；</li>
-<li>border提供圆角的支持；</li>
-</ul>
-</li>
-<li>7.CSS3 的渐变效果（Gradient）<ul>
-<li>线性渐变: 左上(0% 0%)到右上(0% 100%)即从左到右水平渐变（linear）</li>
-<li>经向渐变：从一个圆到一个圆的渐变（radial）</li>
-</ul>
-</li>
-<li>8.CSS3 的阴影（Shadow）和反射（Reflect）效果<ul>
-<li>对于文字阴影：表示 X 轴方向阴影向右 5px,Y 轴方向阴影向下 2px, 而阴影模糊半径 6px，颜色为 rgba(64, 64, 64, 0.5)。其中偏移量可以为负值，负值则反方向。元素阴影也类似。</li>
-<li>text-shadow:5px 2px 6px rgba(64, 64, 64, 0.5); </li>
-<li>box-shadow:3px 3px 3px rgba(0, 64, 128, 0.3);</li>
-<li>反射：-webkit-box-reflect: below 10px</li>
-</ul>
-</li>
-<li>9.CSS3 的背景效果<ul>
-<li>Background Clip 确定背景画区 | Background Origin确定背景位置 </li>
-<li>Background Size 调整背景图片的大小 | Background Break 元素可以被分成几个独立的盒子 | CSS3 中支持多背景图片</li>
-</ul>
-</li>
-<li>10.CSS3 的盒子模型（flex box）<ul>
-<li>display: flex; </li>
-<li>justify-content:center; </li>
-<li>align-item:center;</li>
-</ul>
-</li>
-<li>css中  盒模型：w3c标准：<ul>
-<li>width + padding + border +margin                   + IE标准：width(padding + border）+margin</li>
-</ul>
-</li>
-<li><p>11.CSS3 中Transitions, Transforms和Animation 过渡,变换,动画</p>
-<ul>
-<li>过渡：transition: property  duration  timing-function  delay;  </li>
-<li><p>eg：</p>
-<pre><code>div {
-    width:100px; 
-    height:100px; 
-    background:blue; 
-    transition:width 2s liner 1s; 
-}
-div:hover { width:300px; }
-</code></pre></li>
-<li>变换：transform:rotate(7deg) skew(5deg) scale(1.5) translate(120px,0); </li>
-<li>动画：animation : </li>
-<li><p>eg:</p>
-<pre><code>div{ 
-    width:100px;
-    height:100px;
-    background:blue;
-    position:relative;
-    animation : mymove 5s infinite;
-}
-@keyframes mymove {  
-    //兼容-webkit-animation
-    from {left:0px;}
-    to {left:200px;}
-}
-</code></pre></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">H5新特性</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/H5/" class="article-tag-list-link color3">H5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/06/html5-css3新特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-web前端技能树新" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -382,6 +214,79 @@ div:hover { width:300px; }
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/02/20/web前端技能树新/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-PC端浏览器适配" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/02/PC端浏览器适配/">PC端页面适配</a>
+    </h1>
+  
+
+        
+        <a href="/2015/08/02/PC端浏览器适配/" class="archive-article-date">
+  	<time datetime="2015-08-02T13:38:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>哪些pc项目需要考虑适配</p>
+<p>1、项目开始之前，需求明确要求的！（这就不用说了，但是实际这一点很少，至少目前比较少需求有这个意识）<br><br>2、只有一屏设计的pc项目（包括滚屏切换效果的页面）<br><br>
+        
+          <a class="article-more-a" href="/2015/08/02/PC端浏览器适配/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/浏览器适配/" class="article-tag-list-link color1">浏览器适配</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/08/02/PC端浏览器适配/">展开全文 >></a>
         </p>
       
 
@@ -483,6 +388,67 @@ div:hover { width:300px; }
 
 
   
+    <article id="post-实现浏览器内多个标签页之间的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/06/实现浏览器内多个标签页之间的通信/">实现浏览器内多个标签页之间的通信</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/06/实现浏览器内多个标签页之间的通信/" class="archive-article-date">
+  	<time datetime="2015-07-06T13:18:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。<br>
+        
+          <a class="article-more-a" href="/2015/07/06/实现浏览器内多个标签页之间的通信/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/浏览器通信/" class="article-tag-list-link color1">浏览器通信</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/06/实现浏览器内多个标签页之间的通信/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-前端工程师技能树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -545,82 +511,6 @@ div:hover { width:300px; }
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/07/06/前端工程师技能树/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-mmarkdown基本语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/16/mmarkdown基本语法/">mmarkdown基本语法</a>
-    </h1>
-  
-
-        
-        <a href="/2015/05/16/mmarkdown基本语法/" class="archive-article-date">
-  	<time datetime="2015-05-16T12:39:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Markdown 11种基本语法</p>
-<p>现在是我在学习Markdown时做的笔记。学完这些Markdown的基本使用已经不成问题。<br></p>
-<ul>
-<li>1.标题设置（让字体变大，和word的标题意思一样）<br>在Markdown当中设置标题，有两种方式：<br><br>第一种：通过在文字下方添加“=”和“-”，他们分别表示一级标题和二级标题。<br><br>第二种：在文字开头加上 “#”，通过“#”数量表示几级标题。（一共只有1~6级标题，1级标题字体最大）</li>
-</ul>
-        
-          <a class="article-more-a" href="/2015/05/16/mmarkdown基本语法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/markdown教程/" class="article-tag-list-link color1">markdown教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/05/16/mmarkdown基本语法/">展开全文 >></a>
         </p>
       
 
@@ -727,6 +617,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -743,11 +641,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
+                <a href="javascript:void(0)" class="js-tag color3">技能</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技能</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -756,10 +654,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">web技能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">

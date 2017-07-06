@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-06T13:26:58.815Z</updated>
+  <updated>2017-07-06T09:00:55.878Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,58 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>实现浏览器内多个标签页之间的通信</title>
-    <link href="http://yoursite.com/2017/07/06/%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%A4%9A%E4%B8%AA%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/"/>
-    <id>http://yoursite.com/2017/07/06/实现浏览器内多个标签页之间的通信/</id>
-    <published>2017-07-06T13:18:22.000Z</published>
-    <updated>2017-07-06T13:26:58.815Z</updated>
-    
-    <content type="html"><![CDATA[<p>本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。<br><a id="more"></a></p>
-<ul>
-<li>解题方法</li>
-<li><p>方法一：使用localStorage</p>
-<ul>
-<li>使用localStorage.setItem(key,value);添加内容</li>
-<li><p>使用storage事件监听添加、修改、删除的动作</p>
-<pre><code>window.addEventListener(&quot;storage&quot;,function(event){ 
-    $(&quot;#name&quot;).val(event.key+”=”+event.newValue);  
-});  
-</code></pre></li>
-</ul>
-</li>
-<li><p>方法二、使用cookie+setInterval</p>
-<pre><code>&lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
-&lt;input type=&quot;button&quot; id=&quot;btnOK&quot;value=&quot;发送&quot;&gt;
-$(function(){ 
-    $(&quot;#btnOK&quot;).click(function(){ 
-    varname=$(&quot;#name&quot;).val();  
-    document.cookie=&quot;name=&quot;+name;  
-    });  
-}); 
-</code></pre><p>  //获取Cookie的内容  </p>
-<pre><code>function getKey(key) {  
-    return JSON.parse(&quot;{\&quot;&quot;+ document.cookie.replace(/;\s+/gim,&quot;\&quot;,\&quot;&quot;).replace(/=/gim, &quot;\&quot;:\&quot;&quot;) +&quot;\&quot;}&quot;)[key];  
-}  //每隔1秒获取Cookie的内容 
-
-setInterval(function(){  
-    console.log(getKey(&quot;name&quot;));  
-},1000);
-</code></pre></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="浏览器通信" scheme="http://yoursite.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E4%BF%A1/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>前端PC兼容问题总结</title>
@@ -1031,6 +979,32 @@ div:hover { width:300px; }
   </entry>
   
   <entry>
+    <title>PC端页面适配</title>
+    <link href="http://yoursite.com/2015/08/02/PC%E7%AB%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%82%E9%85%8D/"/>
+    <id>http://yoursite.com/2015/08/02/PC端浏览器适配/</id>
+    <published>2015-08-02T13:38:41.000Z</published>
+    <updated>2017-07-06T13:42:47.154Z</updated>
+    
+    <content type="html"><![CDATA[<p>哪些pc项目需要考虑适配</p>
+<p>1、项目开始之前，需求明确要求的！（这就不用说了，但是实际这一点很少，至少目前比较少需求有这个意识）<br><br>2、只有一屏设计的pc项目（包括滚屏切换效果的页面）<br><br><a id="more"></a><br>如何做适配</p>
+<p>1、百分比的应用<br><br>百分比的应用在于主视角的定位和缩放，百分比的取值以原设计稿的尺寸为标准。什么意思呢？举个栗子，一个元素在原设计稿里，量出来距离顶部是200px，如果写死可能是top:200px 或者margin-top:200px,现在要转成百分比，那么这个值可能就是23.3%。这个值怎么算？如果设计稿是1080，200/1080=18.51%这样计算出来百分比的值。<br><br>但是，有个地方要注意，流体布局下，百分比的值是根据父层计算的；absolute布局的元素是根据最近的relative父层计算的；fixed布局的元素是根据window的可视区域计算的。<br><br>2、js监测<br><br>上面说了，百分比是要有父层做参照物的，那么如果父层都用百分比，那就是最终是根据window来参照的，因为pc绝大部分都是宽屏设备，而且他们的比例是不一致的，我们来计算下(190是减去浏览器工具条、window桌面条、我们页面通用顶条)：<br><br>设计稿：1920/(1080-190) = 2.16<br><br>14寸普通笔记本：1366/(768-190) = 2.36<br><br>所以，我们不能宽高都100%按照屏幕尺寸来计算。另外考虑到主要是高度对pc页面的主视角影响比较大，我们需要借助js来计算确定一个最小高度临界值（当然这个可以用css的min-height来实现）；<br><br>另外一个是，通过js判断最小高度临界值，再加上这个最小临界值的class，为了处理那些特殊的布局或者百分比无法完全解决适配的元素，比如字体的相关布局</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;哪些pc项目需要考虑适配&lt;/p&gt;
+&lt;p&gt;1、项目开始之前，需求明确要求的！（这就不用说了，但是实际这一点很少，至少目前比较少需求有这个意识）&lt;br&gt;&lt;br&gt;2、只有一屏设计的pc项目（包括滚屏切换效果的页面）&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="浏览器适配" scheme="http://yoursite.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%82%E9%85%8D/"/>
+    
+    
+      <category term="浏览器" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>多个css文件合并到一个css中</title>
     <link href="http://yoursite.com/2015/07/16/%E5%A4%9A%E4%B8%AAcss%E6%96%87%E4%BB%B6%E5%90%88%E5%B9%B6%E5%88%B0%E4%B8%80%E4%B8%AAcss%E4%B8%AD/"/>
     <id>http://yoursite.com/2015/07/16/多个css文件合并到一个css中/</id>
@@ -1067,6 +1041,58 @@ div:hover { width:300px; }
     
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>实现浏览器内多个标签页之间的通信</title>
+    <link href="http://yoursite.com/2015/07/06/%E5%AE%9E%E7%8E%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%A4%9A%E4%B8%AA%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/"/>
+    <id>http://yoursite.com/2015/07/06/实现浏览器内多个标签页之间的通信/</id>
+    <published>2015-07-06T13:18:22.000Z</published>
+    <updated>2017-07-06T13:37:30.447Z</updated>
+    
+    <content type="html"><![CDATA[<p>本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。<br><a id="more"></a></p>
+<ul>
+<li>解题方法</li>
+<li><p>方法一：使用localStorage</p>
+<ul>
+<li>使用localStorage.setItem(key,value);添加内容</li>
+<li><p>使用storage事件监听添加、修改、删除的动作</p>
+<pre><code>window.addEventListener(&quot;storage&quot;,function(event){ 
+    $(&quot;#name&quot;).val(event.key+”=”+event.newValue);  
+});  
+</code></pre></li>
+</ul>
+</li>
+<li><p>方法二、使用cookie+setInterval</p>
+<pre><code>&lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+&lt;input type=&quot;button&quot; id=&quot;btnOK&quot;value=&quot;发送&quot;&gt;
+$(function(){ 
+    $(&quot;#btnOK&quot;).click(function(){ 
+    varname=$(&quot;#name&quot;).val();  
+    document.cookie=&quot;name=&quot;+name;  
+    });  
+}); 
+</code></pre><p>  //获取Cookie的内容  </p>
+<pre><code>function getKey(key) {  
+    return JSON.parse(&quot;{\&quot;&quot;+ document.cookie.replace(/;\s+/gim,&quot;\&quot;,\&quot;&quot;).replace(/=/gim, &quot;\&quot;:\&quot;&quot;) +&quot;\&quot;}&quot;)[key];  
+}  //每隔1秒获取Cookie的内容 
+
+setInterval(function(){  
+    console.log(getKey(&quot;name&quot;));  
+},1000);
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本题主要考察数据存储的知识，数据存储有本地和服务器存储两种方式，对于前端开发来讲，只需要讲解用本地存储的方式来解决就好。当然也能知道服务器端的方式更好。本题的难易程度一般，只要能够说出思路就可以，至少说两种解决方法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="浏览器通信" scheme="http://yoursite.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E4%BF%A1/"/>
+    
     
   </entry>
   
