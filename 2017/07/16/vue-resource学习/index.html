@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2015/10 | Hexo-wmの博客</title>
+  <title>vue-resource学习 | Hexo-wmの博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="做自己爱做的事，爱自己在做的事！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo-wmの博客">
-<meta property="og:url" content="http://yoursite.com/archives/2015/10/index.html">
+  <meta name="description" content="vue-resource和axios学习笔记原来vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios。 vue-resource和axios与jquery的$.ajax功能类似，都是与后台进行交互的第三方库。因为在回顾vue的内容，而且vue官方文档表示今后后台交互推荐axios，所以顺便就把vue-resource和axios都看了一下。 一. vue-re">
+<meta name="keywords" content="vue-source,axios">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-resource学习">
+<meta property="og:url" content="http://yoursite.com/2017/07/16/vue-resource学习/index.html">
 <meta property="og:site_name" content="Hexo-wmの博客">
-<meta property="og:description" content="做自己爱做的事，爱自己在做的事！">
+<meta property="og:description" content="vue-resource和axios学习笔记原来vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios。 vue-resource和axios与jquery的$.ajax功能类似，都是与后台进行交互的第三方库。因为在回顾vue的内容，而且vue官方文档表示今后后台交互推荐axios，所以顺便就把vue-resource和axios都看了一下。 一. vue-re">
+<meta property="og:updated_time" content="2017-07-16T12:47:43.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo-wmの博客">
-<meta name="twitter:description" content="做自己爱做的事，爱自己在做的事！">
+<meta name="twitter:title" content="vue-resource学习">
+<meta name="twitter:description" content="vue-resource和axios学习笔记原来vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios。 vue-resource和axios与jquery的$.ajax功能类似，都是与后台进行交互的第三方库。因为在回顾vue的内容，而且vue官方文档表示今后后台交互推荐axios，所以顺便就把vue-resource和axios都看了一下。 一. vue-re">
   
     <link rel="alternative" href="/atom.xml" title="Hexo-wmの博客" type="application/atom+xml">
   
@@ -154,71 +156,283 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-resource学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/16/url渲染过程/" class="archive-article-date">
-  	<time datetime="2015-10-16T14:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/16/url渲染过程/">url渲染过程</a>
+    <h1 class="article-title" itemprop="name">
+      vue-resource学习
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/16/vue-resource学习/" class="archive-article-date">
+  	<time datetime="2017-07-16T12:28:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="vue-resource和axios学习笔记"><a href="#vue-resource和axios学习笔记" class="headerlink" title="vue-resource和axios学习笔记"></a>vue-resource和axios学习笔记</h4><p>原来vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios。</p>
+<p>vue-resource和axios与jquery的$.ajax功能类似，都是与后台进行交互的第三方库。因为在回顾vue的内容，而且vue官方文档表示今后后台交互推荐axios，所以顺便就把vue-resource和axios都看了一下。</p>
+<h5 id="一-vue-resource"><a href="#一-vue-resource" class="headerlink" title="一. vue-resource"></a>一. vue-resource</h5><ul>
+<li><p>1)http</p>
+<pre><code>vue-resource可在全局使用，也可基于某一个vue实例使用，区别在于是否有$。
+基于全局对象使用http：
+eg1:Vue.http.get(url,[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+eg2:Vue.http.post(url,[body],[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+基于某个vue实例使用$http:
+eg1:this.$http.get(url,[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+eg2:this.$http.post(url,[body],[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+a. restful请求
+get(url[,options])
+delete(url[,options])
+put(url,[body],[options])
+post(url,[body],[options])
+patch(url,[body],[options])
+b. options对象属性
+root（string）相对根路径
+url（string）请求url
+method（string）请求的http方法
+body（Object）请求主体
+params（object）请求参数
+headers（object）请求头
+timeout（number）单位为毫秒的请求超时时间
+before（function）请求发送前函数
+progress（function）progressEvent回调函数
+credientials（boolean）跨域请求是否需要使用凭证
+emulateHTTP（boolean）Web服务器无法处理put、patch、delete请求时，启用emulateHTTP，请求以普通post方式发出，并将X-HTTP-Method-Override属性设置为实际的HTTP方法
+emulateJSON（boolean）Web服务器无法处理编码为application/json的请求，启用emulateJSON，请求以application/x-www-form-urlencoded作为MIME type发送`
+</code></pre></li>
+<li><p>2）$resource</p>
+<pre><code>$resource提供了与http类似的请求API，只是API的名称和参数等表现形式不同。
+get==&gt;this.$resource(url).get().then()
+post==&gt;this.$resource(url).save(url[,body]).then()
+put==&gt;this.$resource(url).update([options],[body]).then()
+delete==&gt;this.$resource(url).delete([options]).then()
+</code></pre></li>
+<li><p>3)interceptor拦截器：可在请求发送前后对请求和返回的数据进行处理(请求一触发，全局的拦截器或局部拦截器将会对其进行处理)</p>
+<pre><code>Vue.http.interceptor.push((request, next) =&gt; {
+    // 请求发送前的处理
+    next(response=&gt; {
+        // 请求发送后的处理
+        return response;
+    });
+});
+</code></pre></li>
+</ul>
+<h4 id="二-axios"><a href="#二-axios" class="headerlink" title="二. axios"></a>二. axios</h4><p>axios的使用比vue-resource更灵活多变。</p>
+<ul>
+<li><p>1)创建axios实例</p>
+<p>  axios.create([config])</p>
+</li>
+<li><p>2）axios发送请求的方式多种：</p>
+<ul>
+<li>a.axios.get(‘/user?ID:12345’).then() <br><br>axios.post(‘/user’, {ID:12345}).then()</li>
+<li>b. axios.get(‘/user’, {params:{ID:12345}}).then()</li>
+<li><p>c. axios({config})</p>
+<pre><code>axios({
+    url: &apos;/user&apos;,
+    method: &apos;post&apos;,
+    data: {
+        ID: 12345
+    }
+});
+</code></pre></li>
+<li>d. axios(url[,config])</li>
+</ul>
+</li>
+<li><p>3）interceptor拦截器</p>
+<p>  axios的拦截器可分为request拦截器和response拦截器</p>
+<ul>
+<li><p>a. request拦截器</p>
+<pre><code>axios.interceptor.request.use(config =&gt; {
+    // 发送前处理
+    return config;
+}, error =&gt; {
+    // 请求发生错误处理
+    return Promise.reject(error);
+});
+</code></pre></li>
+<li><p>b. response拦截器</p>
+<pre><code>axios.interceptor.response.use(response =&gt; {
+    // 数据处理
+    return response;
+}, error =&gt; {
+    // 发生错误处理
+    return Promise.reject(error);
+});
+</code></pre></li>
+</ul>
+</li>
+<li><p>4）拦截器销毁</p>
+<pre><code>var myInterceptor = axios.interceptor.request.use();
+axios.interceptor.request.eject(myInterceptor);
+</code></pre></li>
+<li><p>5）请求取消axios.CancelToken(同一个cancelToken可取消多个请求)</p>
+<pre><code>var CancelToken = axios.CancelToken;
+var source = CancelToken.source();
+axios.get(&apos;/user&apos;, {cancelToken: source.token}).catch(thrown =&gt; {
+    if (axios.isCancel(thrown)) {} else {}
+});
+source.cancel(&apos;****&apos;);
+</code></pre></li>
+<li><p>6) 解决web服务器无法编译json的请求</p>
+<ul>
+<li><p>a. URLSearchParams</p>
+<pre><code>var params = new URLSearchParams();
+params.append(&apos;p1&apos;, &apos;v1&apos;);
+axios.post(&apos;/user&apos;, params);
+</code></pre></li>
+<li><p>b. qs</p>
+<pre><code>var qs = require(&apos;qs&apos;);
+axios.post(&apos;/user&apos;, qs.stringify({pa:v1});
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue-source</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/浏览器渲染/" class="article-tag-list-link color1">浏览器渲染</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
         		</li>
       		
 		</ul>
 	</div>
 
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/16/vue-resource学习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/16/H5活动页制作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          H5活动页制作
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -241,8 +455,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -156,6 +156,284 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-vue-resource学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/16/vue-resource学习/">vue-resource学习</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/16/vue-resource学习/" class="archive-article-date">
+  	<time datetime="2017-07-16T12:28:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="vue-resource和axios学习笔记"><a href="#vue-resource和axios学习笔记" class="headerlink" title="vue-resource和axios学习笔记"></a>vue-resource和axios学习笔记</h4><p>原来vue更新到2.0之后,作者就宣告不再对vue-resource更新,而是推荐的axios。</p>
+<p>vue-resource和axios与jquery的$.ajax功能类似，都是与后台进行交互的第三方库。因为在回顾vue的内容，而且vue官方文档表示今后后台交互推荐axios，所以顺便就把vue-resource和axios都看了一下。</p>
+<h5 id="一-vue-resource"><a href="#一-vue-resource" class="headerlink" title="一. vue-resource"></a>一. vue-resource</h5><ul>
+<li><p>1)http</p>
+<pre><code>vue-resource可在全局使用，也可基于某一个vue实例使用，区别在于是否有$。
+基于全局对象使用http：
+eg1:Vue.http.get(url,[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+eg2:Vue.http.post(url,[body],[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+基于某个vue实例使用$http:
+eg1:this.$http.get(url,[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+eg2:this.$http.post(url,[body],[options]).then(
+res=&gt;{},
+res=&gt;{}).catch(res=&gt;{});
+a. restful请求
+get(url[,options])
+delete(url[,options])
+put(url,[body],[options])
+post(url,[body],[options])
+patch(url,[body],[options])
+b. options对象属性
+root（string）相对根路径
+url（string）请求url
+method（string）请求的http方法
+body（Object）请求主体
+params（object）请求参数
+headers（object）请求头
+timeout（number）单位为毫秒的请求超时时间
+before（function）请求发送前函数
+progress（function）progressEvent回调函数
+credientials（boolean）跨域请求是否需要使用凭证
+emulateHTTP（boolean）Web服务器无法处理put、patch、delete请求时，启用emulateHTTP，请求以普通post方式发出，并将X-HTTP-Method-Override属性设置为实际的HTTP方法
+emulateJSON（boolean）Web服务器无法处理编码为application/json的请求，启用emulateJSON，请求以application/x-www-form-urlencoded作为MIME type发送`
+</code></pre></li>
+<li><p>2）$resource</p>
+<pre><code>$resource提供了与http类似的请求API，只是API的名称和参数等表现形式不同。
+get==&gt;this.$resource(url).get().then()
+post==&gt;this.$resource(url).save(url[,body]).then()
+put==&gt;this.$resource(url).update([options],[body]).then()
+delete==&gt;this.$resource(url).delete([options]).then()
+</code></pre></li>
+<li><p>3)interceptor拦截器：可在请求发送前后对请求和返回的数据进行处理(请求一触发，全局的拦截器或局部拦截器将会对其进行处理)</p>
+<pre><code>Vue.http.interceptor.push((request, next) =&gt; {
+    // 请求发送前的处理
+    next(response=&gt; {
+        // 请求发送后的处理
+        return response;
+    });
+});
+</code></pre></li>
+</ul>
+<h4 id="二-axios"><a href="#二-axios" class="headerlink" title="二. axios"></a>二. axios</h4><p>axios的使用比vue-resource更灵活多变。</p>
+<ul>
+<li><p>1)创建axios实例</p>
+<p>  axios.create([config])</p>
+</li>
+<li><p>2）axios发送请求的方式多种：</p>
+<ul>
+<li>a.axios.get(‘/user?ID:12345’).then() <br><br>axios.post(‘/user’, {ID:12345}).then()</li>
+<li>b. axios.get(‘/user’, {params:{ID:12345}}).then()</li>
+<li><p>c. axios({config})</p>
+<pre><code>axios({
+    url: &apos;/user&apos;,
+    method: &apos;post&apos;,
+    data: {
+        ID: 12345
+    }
+});
+</code></pre></li>
+<li>d. axios(url[,config])</li>
+</ul>
+</li>
+<li><p>3）interceptor拦截器</p>
+<p>  axios的拦截器可分为request拦截器和response拦截器</p>
+<ul>
+<li><p>a. request拦截器</p>
+<pre><code>axios.interceptor.request.use(config =&gt; {
+    // 发送前处理
+    return config;
+}, error =&gt; {
+    // 请求发生错误处理
+    return Promise.reject(error);
+});
+</code></pre></li>
+<li><p>b. response拦截器</p>
+<pre><code>axios.interceptor.response.use(response =&gt; {
+    // 数据处理
+    return response;
+}, error =&gt; {
+    // 发生错误处理
+    return Promise.reject(error);
+});
+</code></pre></li>
+</ul>
+</li>
+<li><p>4）拦截器销毁</p>
+<pre><code>var myInterceptor = axios.interceptor.request.use();
+axios.interceptor.request.eject(myInterceptor);
+</code></pre></li>
+<li><p>5）请求取消axios.CancelToken(同一个cancelToken可取消多个请求)</p>
+<pre><code>var CancelToken = axios.CancelToken;
+var source = CancelToken.source();
+axios.get(&apos;/user&apos;, {cancelToken: source.token}).catch(thrown =&gt; {
+    if (axios.isCancel(thrown)) {} else {}
+});
+source.cancel(&apos;****&apos;);
+</code></pre></li>
+<li><p>6) 解决web服务器无法编译json的请求</p>
+<ul>
+<li><p>a. URLSearchParams</p>
+<pre><code>var params = new URLSearchParams();
+params.append(&apos;p1&apos;, &apos;v1&apos;);
+axios.post(&apos;/user&apos;, params);
+</code></pre></li>
+<li><p>b. qs</p>
+<pre><code>var qs = require(&apos;qs&apos;);
+axios.post(&apos;/user&apos;, qs.stringify({pa:v1});
+</code></pre></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue-source</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/vue-resource学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-H5活动页制作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/16/H5活动页制作/">H5活动页制作</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/16/H5活动页制作/" class="archive-article-date">
+  	<time datetime="2017-07-16T08:28:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>H5移动端活动页</li>
+<li>首先需要解决移动端浏览器的适配问题<ul>
+<li>移动端的适配（像素，视口，分辨率）</li>
+</ul>
+</li>
+<li>1.使用插件hotcss插件。解决适配。但是插件介绍说最好使用sass语法编写。而sass语法的编译需要服务器环境。于是又安装了Ruby。<ul>
+<li>安装Ruby是在官网指导下载安装完成的。</li>
+<li>Ruby安装完成后安装Sass，配置webstorm的sass环境。</li>
+<li>在github上下载hotcss插件。</li>
+<li>在html页面导入hotcss.js文件。位置是在引入的css上面</li>
+<li>在css文件中调用hotcss语法。@import语法</li>
+<li>在需要px的位置上用函数语法调用</li>
+</ul>
+</li>
+<li>2.使用Photoshop切图。量距离。psd格式的图片（包括图层）</li>
+<li>3.使用jQuery库，ajax函数调用后台数据</li>
+<li>4.使用百度的gps获取地理位置。ajax的跨域技术获取信息。同时解决ajax中success函数中数据无法在全局使用的问题。利用callback函数调用。</li>
+<li>5.在150服务器上部署项目。</li>
+<li>6.部署完成。修改bug。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">H5</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/H5活动页/" class="article-tag-list-link color1">H5活动页</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/H5活动页制作/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-vue2.0变化 下" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -390,162 +668,6 @@ http://vuejs.org/
 
 
   
-    <article id="post-vue-router" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/16/vue-router/">vue-router使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/16/vue-router/" class="archive-article-date">
-  	<time datetime="2017-04-16T12:40:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一-vue1版本"><a href="#一-vue1版本" class="headerlink" title="一.vue1版本"></a>一.vue1版本</h3><pre><code>home    news 
-</code></pre><ul>
-<li><p>路由:<br>  vue-router</p>
-<pre><code>-&gt;  如何查看版本:
-    bower info vue-router
-</code></pre><p>  路由使用版本: 0.7.13<br>配合vue-loader使用:</p>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/04/16/vue-router/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue1</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/16/vue-router/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-搭建一个vue实例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/02/搭建一个vue实例/">第一个vue-jd项目</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/02/搭建一个vue实例/" class="archive-article-date">
-  	<time datetime="2017-04-02T08:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-在github上创建一个项目例如-vue-jd"><a href="#1-在github上创建一个项目例如-vue-jd" class="headerlink" title="1. 在github上创建一个项目例如:vue-jd"></a>1. 在github上创建一个项目例如:vue-jd</h1><ul>
-<li>复制地址例如:<a href="https://github.com/wmlove/vue-jd.git">https://github.com/wmlove/vue-jd.git</a><h1 id="2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行"><a href="#2-在本地项目根目录下-已经下载了git的情况-右键启动Git-Bash命令行" class="headerlink" title="2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行"></a>2. 在本地项目根目录下(已经下载了git的情况), 右键启动Git Bash命令行</h1>
-        
-          <a class="article-more-a" href="/2017/04/02/搭建一个vue实例/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue2</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue文章/" class="article-tag-list-link color1">vue文章</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/02/搭建一个vue实例/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -638,7 +760,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color3">H5</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -646,15 +768,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,11 +784,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技能</a>
+                <a href="javascript:void(0)" class="js-tag color1">vue-source</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">H5新特性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技能</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,11 +808,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">web技能</a>
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">jsonp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">web技能</a>
               </li>
              
               <li class="article-tag-list-item">
